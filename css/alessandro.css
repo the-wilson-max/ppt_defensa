@@ -1,0 +1,679 @@
+/* =========================================
+   TEMA ALESSANDRO — VINO / BURDEOS
+   Alterna slides oscuras y claras
+========================================= */
+
+:root {
+    --vino-dark:    #2a0a14;
+    --vino-darker:  #1a0610;
+    --vino-primary: #8b1e3f;    /* vino principal */
+    --vino-light:   #b83355;
+    --vino-soft:    #d4688a;
+    --vino-cream:   #f7ecef;    /* fondo claro */
+    --vino-ink:     #2b0d18;    /* texto en claro */
+    --vino-muted:   #6e3a4c;
+    --vino-border:  #3a1220;
+}
+
+/* =========================================
+   BASE
+========================================= */
+.ppt-wrapper { position: relative; width: 100%; }
+
+.ppt-slide {
+    position: relative;
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 8%;
+    overflow: hidden;
+    border-bottom: 1px solid var(--vino-border);
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2;
+    max-width: 980px;
+    width: 100%;
+}
+.slide-content.center { text-align: center; }
+.slide-content.wide { max-width: 1200px; }
+
+/* =========================================
+   SLIDE OSCURA (vino)
+========================================= */
+.ppt-slide.slide-dark {
+    background: var(--vino-dark);
+    color: #f5e8ec;
+}
+.slide-dark .slide-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at top left, rgba(184,51,85,.18), transparent 55%),
+        radial-gradient(ellipse at bottom right, rgba(139,30,63,.22), transparent 55%),
+        var(--vino-dark);
+    z-index: 0;
+}
+.slide-dark .grid-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(184,51,85,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(184,51,85,.08) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+/* =========================================
+   SLIDE CLARA (crema vino)
+========================================= */
+.ppt-slide.slide-light {
+    background: var(--vino-cream);
+    color: var(--vino-ink);
+}
+.slide-light::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top right, rgba(139,30,63,.06), transparent 50%),
+        radial-gradient(circle at bottom left, rgba(139,30,63,.04), transparent 50%);
+    z-index: 0;
+}
+.slide-light .slide-content { z-index: 2; }
+
+/* =========================================
+   ELEMENTOS COMUNES
+========================================= */
+.ppt-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+    padding: 6px 14px;
+    border-radius: 30px;
+}
+
+.slide-dark .ppt-tag {
+    color: var(--vino-soft);
+    border: 1px solid rgba(184,51,85,.5);
+    background: rgba(184,51,85,.1);
+}
+.slide-light .ppt-tag {
+    color: var(--vino-primary);
+    border: 1px solid rgba(139,30,63,.35);
+    background: rgba(139,30,63,.06);
+}
+
+.ppt-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(52px, 8vw, 118px);
+    font-weight: 900;
+    line-height: .9;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    color: #fff;
+}
+.ppt-title span { color: var(--vino-soft); }
+
+.ppt-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(34px, 5vw, 68px);
+    font-weight: 900;
+    line-height: .95;
+    margin-bottom: 25px;
+}
+
+.slide-dark .ppt-heading  { color: #fff; }
+.slide-dark .ppt-heading span  { color: var(--vino-soft); }
+.slide-light .ppt-heading { color: var(--vino-ink); }
+.slide-light .ppt-heading span { color: var(--vino-primary); }
+
+.ppt-subtitle {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #d4bcc5;
+    max-width: 640px;
+    margin: 0 auto 30px;
+}
+
+.ppt-text {
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 850px;
+    margin-bottom: 22px;
+}
+.slide-dark .ppt-text { color: #e0ccd4; }
+.slide-light .ppt-text { color: var(--vino-muted); }
+.slide-light .ppt-text strong { color: var(--vino-primary); }
+
+.ppt-text.center-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ppt-author {
+    margin-top: 35px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--vino-soft);
+    font-weight: 700;
+}
+
+.ppt-final {
+    margin-top: 35px;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--vino-soft);
+}
+
+/* =========================================
+   QUOTE BLOCK (slide 2 clara)
+========================================= */
+.quote-block {
+    position: relative;
+    margin-top: 30px;
+    padding: 30px 35px 30px 70px;
+    background: #fff;
+    border-left: 4px solid var(--vino-primary);
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(139,30,63,.08);
+    max-width: 900px;
+}
+.quote-mark {
+    position: absolute;
+    left: 18px;
+    top: 12px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 90px;
+    line-height: 1;
+    color: var(--vino-primary);
+    opacity: .25;
+    font-weight: 900;
+}
+.quote-block p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--vino-ink);
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+/* =========================================
+   IMPACT GRID (slide 3 oscura)
+========================================= */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+.impact-card {
+    background: linear-gradient(160deg, rgba(139,30,63,.15), rgba(42,10,20,.6));
+    border: 1px solid rgba(184,51,85,.3);
+    border-radius: 12px;
+    padding: 24px 22px;
+    transition: .3s;
+}
+.impact-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--vino-light);
+    box-shadow: 0 12px 30px rgba(139,30,63,.3);
+}
+.i-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--vino-soft);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+.impact-card h3 {
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.impact-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #c9aab5;
+}
+
+/* =========================================
+   TRIGGERS GRID (slide 4 clara)
+========================================= */
+.triggers-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+.trigger-card {
+    background: #fff;
+    border: 1px solid rgba(139,30,63,.15);
+    border-radius: 14px;
+    padding: 26px 24px;
+    transition: .3s;
+    box-shadow: 0 4px 15px rgba(139,30,63,.05);
+}
+.trigger-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--vino-primary);
+    box-shadow: 0 12px 30px rgba(139,30,63,.15);
+}
+.t-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+.trigger-card h3 {
+    font-size: 16px;
+    color: var(--vino-primary);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.trigger-card p {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--vino-muted);
+}
+
+/* =========================================
+   CYCLE TIMELINE (slide 5 oscura)
+========================================= */
+.cycle-timeline {
+    display: flex;
+    align-items: stretch;
+    gap: 12px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.cycle-step {
+    flex: 1 1 200px;
+    background: linear-gradient(160deg, rgba(139,30,63,.2), rgba(26,6,16,.8));
+    border: 1px solid rgba(184,51,85,.4);
+    border-radius: 12px;
+    padding: 22px 18px;
+    transition: .3s;
+    position: relative;
+}
+.cycle-step:hover {
+    transform: translateY(-5px);
+    border-color: var(--vino-soft);
+    box-shadow: 0 12px 30px rgba(139,30,63,.35);
+}
+.cycle-step.decisive {
+    background: linear-gradient(160deg, rgba(184,51,85,.4), rgba(42,10,20,.9));
+    border-color: var(--vino-soft);
+    box-shadow: 0 0 25px rgba(184,51,85,.25);
+}
+.c-phase {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: var(--vino-soft);
+    margin-bottom: 8px;
+}
+.cycle-step h3 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 10px;
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: .5px;
+}
+.cycle-step p {
+    font-size: 12px;
+    line-height: 1.65;
+    color: #c9aab5;
+}
+.c-hint {
+    display: block;
+    margin-top: 10px;
+    font-size: 11px;
+    color: var(--vino-soft);
+    font-style: italic;
+    border-top: 1px dashed rgba(184,51,85,.4);
+    padding-top: 8px;
+}
+.cycle-arrow {
+    align-self: center;
+    font-size: 20px;
+    color: var(--vino-soft);
+    font-weight: bold;
+}
+
+/* =========================================
+   APPS GRID (slide 6 clara)
+========================================= */
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+.app-card {
+    background: linear-gradient(180deg, #fff, #fdf5f7);
+    border: 1px solid rgba(139,30,63,.15);
+    border-radius: 14px;
+    padding: 26px 24px;
+    transition: .3s;
+    position: relative;
+    overflow: hidden;
+}
+.app-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: linear-gradient(90deg, var(--vino-primary), var(--vino-light));
+}
+.app-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--vino-primary);
+    box-shadow: 0 12px 30px rgba(139,30,63,.15);
+}
+.a-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 34px;
+    font-weight: 900;
+    color: var(--vino-primary);
+    margin-bottom: 12px;
+    line-height: 1;
+}
+.app-card h3 {
+    font-size: 15px;
+    color: var(--vino-ink);
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+.app-card p {
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--vino-muted);
+}
+
+/* =========================================
+   SLIDE FINAL
+========================================= */
+.ppt-slide.final .slide-content {
+    max-width: 800px;
+}
+
+/* =========================================
+   BOTÓN LATERAL DE NAVEGACIÓN
+========================================= */
+.ppt-nav {
+    position: fixed;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 999;
+    background: rgba(26,6,16,.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(184,51,85,.35);
+    border-radius: 50px;
+    padding: 14px 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+.ppt-nav-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,51,85,.4);
+    background: rgba(184,51,85,.12);
+    color: var(--vino-soft);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.ppt-nav-btn:hover {
+    background: var(--vino-primary);
+    color: #fff;
+    transform: scale(1.1);
+}
+.ppt-progress {
+    width: 6px;
+    height: 120px;
+    background: rgba(184,51,85,.2);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+.ppt-progress-fill {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 14.28%;
+    background: linear-gradient(180deg, var(--vino-soft), var(--vino-primary));
+    transition: height .4s ease;
+    border-radius: 4px;
+}
+.ppt-counter {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--vino-soft);
+    letter-spacing: 1px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 4px 0;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 900px) {
+    .impact-grid,
+    .apps-grid { grid-template-columns: 1fr; }
+    .triggers-grid { grid-template-columns: 1fr; }
+    .cycle-arrow { display: none; }
+    .cycle-step { flex: 1 1 100%; }
+}
+
+@media (max-width: 700px) {
+    .ppt-slide { padding: 45px 6%; min-height: calc(100vh - 60px); }
+    .ppt-nav { right: 10px; padding: 10px 6px; gap: 8px; }
+    .ppt-nav-btn { width: 36px; height: 36px; font-size: 15px; }
+    .ppt-progress { height: 80px; }
+    .ppt-counter { font-size: 10px; }
+    .ppt-title { font-size: clamp(44px, 12vw, 70px); }
+    .ppt-heading { font-size: clamp(30px, 8vw, 48px); }
+    .quote-block { padding: 22px 22px 22px 55px; }
+    .quote-mark { font-size: 60px; left: 10px; }
+}
+/* =========================================
+   JOJO'S BIZARRE ADVENTURE EFFECT
+   Speedlines + Menacing + Ripple Waves
+   Solo para Alessandro (vino)
+========================================= */
+
+/* Contenedor aura */
+.jojo-aura {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+.jojo-aura.final-aura { opacity: .55; }
+
+/* =========================================
+   SPEEDLINES — líneas de acción manga
+========================================= */
+.speedlines,
+.speedlines-light {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1400px;
+    height: 1400px;
+    transform: translate(-50%, -50%);
+}
+
+.speedlines .speedline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 500px;
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(184,51,85,.7) 40%,
+        rgba(212,104,138,.4) 70%,
+        transparent 100%
+    );
+    transform-origin: center bottom;
+    animation: speedlineFlash 1.2s ease-in-out infinite;
+    opacity: 0;
+}
+
+.speedlines-light .speedline {
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(184,51,85,.5) 40%,
+        transparent 100%
+    );
+}
+
+@keyframes speedlineFlash {
+    0%, 100% { opacity: 0; }
+    30%      { opacity: .8; }
+    50%      { opacity: 1; }
+    70%      { opacity: .8; }
+}
+
+/* =========================================
+   MENACING ゴゴゴゴ
+========================================= */
+.jojo-menacing {
+    position: absolute;
+    inset: 0;
+}
+
+.menacing-char {
+    position: absolute;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--vino-soft, #d4688a);
+    text-shadow:
+        0 0 20px rgba(184,51,85,.8),
+        0 0 40px rgba(184,51,85,.5);
+    animation: menacingFloat 2.4s ease-in-out infinite;
+    opacity: 0;
+    user-select: none;
+    letter-spacing: 2px;
+}
+
+@keyframes menacingFloat {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(0) scale(.7);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-6px) scale(1.1);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-12px) scale(1.15);
+    }
+    80% {
+        opacity: .8;
+        transform: translateY(-4px) scale(1);
+    }
+}
+
+/* =========================================
+   RIPPLE WAVES — Ondas de energía tipo Hamon
+========================================= */
+.jojo-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid var(--vino-primary, #8b1e3f);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripplePulse 3.5s ease-out infinite;
+    box-shadow:
+        0 0 40px rgba(184,51,85,.5),
+        inset 0 0 30px rgba(184,51,85,.3);
+}
+.jojo-ring.wave-1 { animation-delay: 0s;   border-color: var(--vino-soft, #d4688a); }
+.jojo-ring.wave-2 { animation-delay: 1.15s; border-color: var(--vino-light, #b83355); }
+.jojo-ring.wave-3 { animation-delay: 2.3s;  border-color: var(--vino-primary, #8b1e3f); }
+
+@keyframes ripplePulse {
+    0% {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        border-width: 3px;
+    }
+    15% {
+        opacity: 1;
+    }
+    100% {
+        width: 800px;
+        height: 800px;
+        opacity: 0;
+        border-width: 1px;
+    }
+}
+
+/* =========================================
+   EFECTO ESPECIAL EN EL TÍTULO (destello)
+   ========================================= */
+.jojo-slide .ppt-title {
+    animation: titleFlash 5s ease-in-out infinite;
+}
+.jojo-slide .ppt-title span {
+    animation: titleGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes titleFlash {
+    0%, 100% { text-shadow: 0 0 0 transparent; }
+    50%      { text-shadow: 0 0 30px rgba(184,51,85,.3); }
+}
+
+@keyframes titleGlow {
+    0%, 100% {
+        text-shadow: 0 0 15px rgba(212,104,138,.4);
+    }
+    50% {
+        text-shadow:
+            0 0 25px rgba(212,104,138,.8),
+            0 0 45px rgba(184,51,85,.6);
+    }
+}
+
+/* =========================================
+   REDUCCIÓN EN MÓVIL
+========================================= */
+@media (max-width: 700px) {
+    .menacing-char { font-size: 26px; }
+    .speedlines { width: 800px; height: 800px; }
+    .speedlines .speedline { height: 300px; }
+    .jojo-ring { animation-duration: 3s; }
+}

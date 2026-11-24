@@ -1,0 +1,385 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NEXUS | Conflictividad Social</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- MENÚ LATERAL -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo institucional">
+            <span class="logo-text">UNIVERSIDAD<br>SAN LUIS GONZAGA</span>
+        </div>
+
+        <div class="section-label">WORKSPACE</div>
+
+        <a class="nav-item active" href="inicio.html">
+            <span class="nav-icon">◈</span>
+            <span class="nav-text">Inicio</span>
+        </a>
+
+        <a class="nav-item" href="1_wilson.html">
+            <span class="nav-icon">◈</span>
+            <span class="nav-text">WILSON</span>
+        </a>
+
+        <a class="nav-item" href="2_damaris.html">
+            <span class="nav-icon">◈</span>
+            <span class="nav-text">DAMARIS</span>
+        </a>
+
+        <a class="nav-item" href="3_alessandro.html">
+            <span class="nav-icon">◈</span>
+            <span class="nav-text">ALESSANDRO</span>
+        </a>
+
+        <a class="nav-item" href="4_edwin.html">
+            <span class="nav-icon">◈</span>
+            <span class="nav-text">EDWIN</span>
+        </a>
+
+        <a class="nav-item" href="5_valery.html">
+            <span class="nav-icon">◈</span>
+            <span class="nav-text">VALERY</span>
+        </a>
+
+        <a class="nav-item" href="6_conclusion.html">
+            <span class="nav-icon">◈</span><span class="nav-text">FABRICIO</span>
+        </a>
+
+        <a class="nav-item active" href="7_preguntas.html">
+            <span class="nav-icon">◈</span><span class="nav-text">PREGUNTAS</span>
+        </a>
+        <div class="sidebar-bottom">
+            <div class="profile">
+                <div class="avatar">W</div>
+                <div class="profile-info">
+                    <strong>Wilson</strong>
+                    <small>Administrador</small>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main">
+
+        <!-- BARRA SUPERIOR -->
+        <header class="topbar">
+
+            <div class="breadcrumb">
+                NEXUS / <strong>Presentación</strong>
+            </div>
+
+            <div class="top-actions">
+                <span class="date" id="currentDate"></span>
+                <button class="icon-btn" id="themeBtn">☼</button>
+            </div>
+
+        </header>
+
+
+        <!-- CARRUSEL PRINCIPAL -->
+        <section class="hero-slider">
+
+            <!-- SLIDE 1 -->
+            <div class="slide active">
+
+                <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1800"
+                     alt="Participación ciudadana">
+
+                <div class="slide-overlay"></div>
+
+                <div class="hero-content">
+
+                    <span class="hero-tag">01 / REALIDAD SOCIAL</span>
+
+                    <h1>CONFLICTOS<br><span>SOCIALES.</span></h1>
+
+                    <p>
+                        Los desacuerdos entre ciudadanos, comunidades y autoridades
+                        surgen por diferentes intereses económicos, políticos y sociales.
+                    </p>
+
+                    <a href="#tema-social" class="hero-btn">CONOCER EL TEMA ↗</a>
+
+                </div>
+            </div>
+
+
+            <!-- SLIDE 2 -->
+            <div class="slide">
+
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=1800"
+                     alt="Medio ambiente y recursos naturales">
+
+                <div class="slide-overlay"></div>
+
+                <div class="hero-content">
+
+                    <span class="hero-tag">02 / PROBLEMAS SOCIOAMBIENTALES</span>
+
+                    <h1>DEFENDAMOS<br><span>NUESTROS RECURSOS.</span></h1>
+
+                    <p>
+                        La desigualdad, la contaminación ambiental y las disputas
+                        por los recursos naturales pueden generar conflictos sociales.
+                    </p>
+
+                    <a href="#tema-social" class="hero-btn">CONOCER MÁS ↗</a>
+
+                </div>
+            </div>
+
+
+            <!-- SLIDE 3 -->
+            <div class="slide">
+
+                <img src="https://images.unsplash.com/photo-1527525443983-6e60c75fff46?w=1800"
+                     alt="Participación y convivencia ciudadana">
+
+                <div class="slide-overlay"></div>
+
+                <div class="hero-content">
+
+                    <span class="hero-tag">03 / CONVIVENCIA SOCIAL</span>
+
+                    <h1>NO A LA<br><span>VIOLENCIA.</span></h1>
+
+                    <p>
+                        La violencia y la ilegalidad afectan la seguridad,
+                        la tranquilidad y la convivencia de nuestra sociedad.
+                    </p>
+
+                    <a href="#tema-social" class="hero-btn">REFLEXIONAR ↗</a>
+
+                </div>
+            </div>
+
+
+            <!-- SLIDE 4 -->
+            <div class="slide">
+
+                <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1800"
+                     alt="Personas dialogando">
+
+                <div class="slide-overlay"></div>
+
+                <div class="hero-content">
+
+                    <span class="hero-tag">04 / PARTICIPACIÓN CIUDADANA</span>
+
+                    <h1>EL DIÁLOGO<br><span>ES LA SOLUCIÓN.</span></h1>
+
+                    <p>
+                        El diálogo democrático permite que ciudadanos y autoridades
+                        compartan opiniones y construyan acuerdos.
+                    </p>
+
+                    <a href="#tema-social" class="hero-btn">DESCUBRIR MÁS ↗</a>
+
+                </div>
+            </div>
+
+
+            <!-- SLIDE 5 -->
+            <div class="slide">
+
+                <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=1800"
+                     alt="Unión y trabajo en equipo">
+
+                <div class="slide-overlay"></div>
+
+                <div class="hero-content">
+
+                    <span class="hero-tag">05 / CULTURA DE PAZ</span>
+
+                    <h1>JUNTOS POR<br><span>UN FUTURO EN PAZ.</span></h1>
+
+                    <p>
+                        El respeto, la tolerancia y la concertación nos permiten
+                        construir una sociedad más justa, segura y solidaria.
+                    </p>
+
+                    <a href="#tema-social" class="hero-btn">CONSTRUIR LA PAZ ↗</a>
+
+                </div>
+            </div>
+
+
+            <!-- CONTROLES DEL CARRUSEL -->
+            <button class="slider-arrow prev" id="prevSlide">❮</button>
+            <button class="slider-arrow next" id="nextSlide">❯</button>
+
+            <div class="slider-bottom">
+                <div class="slider-indicators" id="sliderIndicators"></div>
+                <span id="slideNumber">01 / 05</span>
+            </div>
+
+        </section>
+
+
+        <!-- INTRODUCCIÓN -->
+        <section class="intro-section">
+
+            <div>
+                <div class="eyebrow">BIENVENIDOS A NUESTRO ESPACIO</div>
+
+                <h2>UNA IDEA.<br><span>MIL POSIBILIDADES.</span></h2>
+            </div>
+
+            <p>
+                Explora nuestra presentación y conoce las ideas, propuestas
+                y aportes de cada integrante. Un espacio donde la creatividad,
+                el conocimiento y la innovación se encuentran.
+            </p>
+
+        </section>
+
+
+        <!-- CONTENIDO DEL TEMA -->
+        <section class="topic-section" id="tema-social">
+
+            <div class="topic-heading">
+
+                <div class="eyebrow">ANÁLISIS SOCIAL Y CIUDADANO</div>
+
+                <h2>
+                    CONFLICTIVIDAD SOCIAL<br>
+                    <span>Y CULTURA DE PAZ</span>
+                </h2>
+
+                <p class="topic-description">
+                    La conflictividad social se refiere a los problemas y
+                    desacuerdos que surgen entre personas, comunidades,
+                    empresas y el Estado por intereses económicos,
+                    políticos, sociales o ambientales.
+                </p>
+
+            </div>
+
+
+            <!-- SEIS PUNTOS IMPORTANTES -->
+            <div class="topic-grid">
+
+                <article class="topic-card">
+                    <div class="topic-number">01</div>
+                    <h3>Conflictos sociales</h3>
+                    <p>
+                        Surgen por la desigualdad, falta de atención del Estado,
+                        contaminación ambiental y disputas por los recursos naturales.
+                    </p>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-number">02</div>
+                    <h3>Teoría del conflicto social</h3>
+                    <p>
+                        Explica cómo los diferentes intereses entre grupos
+                        pueden generar desacuerdos y enfrentamientos.
+                    </p>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-number">03</div>
+                    <h3>Violencia e ilegalidad</h3>
+                    <p>
+                        Son consecuencias de los conflictos mal manejados,
+                        que pueden afectar la seguridad y la convivencia social.
+                    </p>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-number">04</div>
+                    <h3>Cultura de paz</h3>
+                    <p>
+                        Promueve el respeto, la tolerancia, la justicia
+                        y la solución pacífica de los problemas.
+                    </p>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-number">05</div>
+                    <h3>Diálogo democrático</h3>
+                    <p>
+                        Permite que las autoridades y ciudadanos expresen
+                        sus opiniones y busquen acuerdos.
+                    </p>
+                </article>
+
+                <article class="topic-card">
+                    <div class="topic-number">06</div>
+                    <h3>Mesas de concertación</h3>
+                    <p>
+                        Son espacios de diálogo donde la población,
+                        autoridades e instituciones trabajan juntas
+                        para encontrar soluciones.
+                    </p>
+                </article>
+
+            </div>
+
+
+            <!-- IDEA PRINCIPAL -->
+            <div class="topic-highlight">
+
+                <div class="highlight-label">IDEA PRINCIPAL</div>
+
+                <h3>Construyendo una sociedad en paz</h3>
+
+                <p>
+                    La cultura de paz busca prevenir la violencia y resolver
+                    los conflictos mediante el diálogo, el respeto y la
+                    participación ciudadana para lograr una sociedad
+                    más justa y segura.
+                </p>
+
+            </div>
+
+
+            <div class="topic-footer">
+                <span>◈</span>
+                CONVIVENCIA · RESPETO · DIÁLOGO · PARTICIPACIÓN CIUDADANA
+            </div>
+
+        </section>
+
+
+        <!-- FLECHAS DE NAVEGACIÓN -->
+        <button class="scroll-navigation" id="scrollDown"
+                aria-label="Bajar al contenido" title="Bajar al contenido">
+            ↓
+        </button>
+
+        <button class="scroll-navigation scroll-up" id="scrollUp"
+                aria-label="Volver arriba" title="Volver arriba">
+            ↑
+        </button>
+
+
+        <!-- PIE DE PÁGINA -->
+        <footer class="footer">
+            NEXUS PRESENTATION © 2026 — ALL RIGHTS RESERVED.
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>

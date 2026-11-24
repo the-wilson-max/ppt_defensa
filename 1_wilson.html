@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXUS | Wilson — Cultura de Paz</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/wilson.css">
+</head>
+<body class="theme-paz">
+
+<div class="app">
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo institucional">
+            <span class="logo-text">UNIVERSIDAD<br>SAN LUIS GONZAGA</span>
+        </div>
+
+        <div class="section-label">WORKSPACE</div>
+
+        <a class="nav-item" href="inicio.html">
+            <span class="nav-icon">◈</span><span class="nav-text">Inicio</span>
+        </a>
+        <a class="nav-item active" href="1_wilson.html">
+            <span class="nav-icon">◈</span><span class="nav-text">WILSON</span>
+        </a>
+        <a class="nav-item" href="2_damaris.html">
+            <span class="nav-icon">◈</span><span class="nav-text">DAMARIS</span>
+        </a>
+        <a class="nav-item" href="3_alessandro.html">
+            <span class="nav-icon">◈</span><span class="nav-text">ALESSANDRO</span>
+        </a>
+        <a class="nav-item" href="4_edwin.html">
+            <span class="nav-icon">◈</span><span class="nav-text">EDWIN</span>
+        </a>
+        <a class="nav-item" href="5_valery.html">
+            <span class="nav-icon">◈</span><span class="nav-text">VALERY</span>
+        </a>
+        <a class="nav-item" href="6_conclusion.html">
+            <span class="nav-icon">◈</span><span class="nav-text">FABRICIO</span>
+        </a>
+
+        <a class="nav-item active" href="7_preguntas.html">
+            <span class="nav-icon">◈</span><span class="nav-text">PREGUNTAS</span>
+        </a>
+        <div class="sidebar-bottom">
+            <div class="profile">
+                <div class="avatar">W</div>
+                <div class="profile-info">
+                    <strong>Wilson</strong>
+                    <small>Administrador</small>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- ==================== MAIN ==================== -->
+    <main class="main">
+
+        <header class="topbar">
+            <div class="breadcrumb">NEXUS / <strong>Wilson</strong></div>
+            <div class="top-actions">
+                <span class="date" id="currentDate"></span>
+                <button class="icon-btn" id="themeBtn">☼</button>
+            </div>
+        </header>
+
+
+        <!-- ==================== PPT WRAPPER ==================== -->
+        <div class="ppt-wrapper">
+
+            <!-- SLIDE 1 — PORTADA (con animación de entrada) -->
+            <section class="ppt-slide slide-dark paz-slide" data-slide>
+                <div class="slide-bg grid-bg"></div>
+
+                <!-- ANIMACIÓN DE ENTRADA: hojas + ondas de paz -->
+                <div class="paz-aura">
+                    <div class="paz-ring ring-1"></div>
+                    <div class="paz-ring ring-2"></div>
+                    <div class="paz-ring ring-3"></div>
+                    <div class="paz-particles" id="pazParticles"></div>
+                </div>
+
+                <div class="slide-content center" style="position:relative; z-index:3;">
+                    <span class="ppt-tag">01 / PRESENTACIÓN</span>
+                    <h1 class="ppt-title">CULTURA<br>DE <span>PAZ.</span></h1>
+                    <p class="ppt-subtitle">
+                        Un conjunto de valores, actitudes y formas de convivencia
+                        que promueven el respeto, la justicia y la solución pacífica
+                        de los conflictos.
+                    </p>
+                    <div class="ppt-author">WILSON · Universidad San Luis Gonzaga</div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2 — ¿QUÉ ES? (clara) -->
+            <section class="ppt-slide slide-light" data-slide>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">02 / CONCEPTO</span>
+                    <h2 class="ppt-heading">¿QUÉ ES LA<br><span>CULTURA DE PAZ?</span></h2>
+
+                    <p class="ppt-text">
+                        La cultura de paz es un conjunto de valores, actitudes,
+                        comportamientos y formas de convivencia que promueven
+                        el respeto a los derechos humanos, la igualdad, la justicia,
+                        la solidaridad y la solución pacífica de los desacuerdos.
+                    </p>
+
+                    <div class="ppt-callout">
+                        <div class="callout-dot"></div>
+                        <p>
+                            No significa que en una sociedad nunca existan problemas,
+                            sino que las personas aprendan a resolverlos mediante el
+                            <strong>respeto, la comunicación y la comprensión</strong>,
+                            evitando recurrir a la violencia.
+                        </p>
+                    </div>
+
+                    <p class="ppt-idea">
+                        <span>IDEA PRINCIPAL:</span> La cultura de paz busca que las personas
+                        puedan convivir a pesar de tener diferentes opiniones,
+                        costumbres, creencias e intereses.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SLIDE 3 — PRINCIPIOS (oscura) -->
+            <section class="ppt-slide slide-dark" data-slide>
+                <div class="slide-bg"></div>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">03 / FUNDAMENTOS</span>
+                    <h2 class="ppt-heading">PRINCIPIOS<br><span>FUNDAMENTALES</span></h2>
+                    <p class="ppt-text small">Bases que permiten construir una sociedad pacífica.</p>
+
+                    <div class="principles-grid">
+                        <div class="principle-card"><div class="p-num">01</div><h3>Respeto</h3><p>Reconocer y valorar los derechos y opiniones de los demás.</p></div>
+                        <div class="principle-card"><div class="p-num">02</div><h3>Tolerancia</h3><p>Aceptar las diferencias culturales, sociales y personales.</p></div>
+                        <div class="principle-card"><div class="p-num">03</div><h3>Igualdad</h3><p>Garantizar que todas las personas tengan los mismos derechos y oportunidades.</p></div>
+                        <div class="principle-card"><div class="p-num">04</div><h3>Justicia</h3><p>Promover el cumplimiento de los derechos y las leyes.</p></div>
+                        <div class="principle-card"><div class="p-num">05</div><h3>Solidaridad</h3><p>Apoyar a las personas y trabajar por el bienestar colectivo.</p></div>
+                        <div class="principle-card"><div class="p-num">06</div><h3>Diálogo</h3><p>Expresar ideas y escuchar a los demás para encontrar soluciones.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4 — VALORES (clara) -->
+            <section class="ppt-slide slide-light" data-slide>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">04 / VALORES</span>
+                    <h2 class="ppt-heading">VALORES QUE FORTALECEN<br><span>UNA CULTURA DE PAZ</span></h2>
+
+                    <ul class="values-list">
+                        <li><strong>Empatía</strong><span>Comprender los sentimientos y las situaciones de otras personas.</span></li>
+                        <li><strong>Responsabilidad</strong><span>Actuar de manera consciente y respetar las consecuencias de nuestros actos.</span></li>
+                        <li><strong>Honestidad</strong><span>Actuar con sinceridad y transparencia.</span></li>
+                        <li><strong>Cooperación</strong><span>Trabajar conjuntamente para alcanzar objetivos comunes.</span></li>
+                        <li><strong>Respeto a la diversidad</strong><span>Reconocer que todas las personas tienen distintas formas de pensar y vivir.</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SLIDE 5 — IMPORTANCIA EN PERÚ (oscura) -->
+            <section class="ppt-slide slide-dark" data-slide>
+                <div class="slide-bg"></div>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">05 / REALIDAD PERUANA</span>
+                    <h2 class="ppt-heading">IMPORTANCIA EN LA<br><span>SOCIEDAD PERUANA</span></h2>
+
+                    <p class="ppt-text">
+                        En nuestro país existen diferentes culturas, costumbres, lenguas,
+                        actividades económicas e intereses sociales. Esta diversidad
+                        representa una riqueza, pero también puede generar desacuerdos
+                        cuando no existe respeto, igualdad o comprensión.
+                    </p>
+
+                    <div class="reasons-grid">
+                        <div class="reason"><span>01</span><p>Fortalecer la convivencia entre las personas y comunidades.</p></div>
+                        <div class="reason"><span>02</span><p>Promover el respeto a los derechos humanos.</p></div>
+                        <div class="reason"><span>03</span><p>Evitar la discriminación y la intolerancia.</p></div>
+                        <div class="reason"><span>04</span><p>Fomentar la participación ciudadana.</p></div>
+                        <div class="reason"><span>05</span><p>Construir una sociedad más justa, inclusiva y democrática.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6 — PRÁCTICA COTIDIANA + CIERRE (clara) -->
+            <section class="ppt-slide slide-light final paz-slide" data-slide>
+                <div class="paz-aura final-aura">
+                    <div class="paz-ring ring-1"></div>
+                    <div class="paz-ring ring-2"></div>
+                    <div class="paz-particles" id="pazParticles2"></div>
+                </div>
+
+                <div class="slide-content" style="position:relative; z-index:3;">
+                    <span class="ppt-tag">06 / CIERRE</span>
+                    <h2 class="ppt-heading">¿CÓMO PRACTICAR<br><span>UNA CULTURA DE PAZ?</span></h2>
+
+                    <div class="practice-grid">
+                        <div class="practice-card">
+                            <div class="p-icon">🏫</div>
+                            <h3>En las instituciones educativas</h3>
+                            <p>Evitando el acoso escolar y respetando las opiniones.</p>
+                        </div>
+                        <div class="practice-card">
+                            <div class="p-icon">🏘️</div>
+                            <h3>En las comunidades</h3>
+                            <p>Participando en actividades que beneficien a todos.</p>
+                        </div>
+                        <div class="practice-card">
+                            <div class="p-icon">🏠</div>
+                            <h3>En las familias</h3>
+                            <p>Resolviendo los desacuerdos mediante la comunicación.</p>
+                        </div>
+                        <div class="practice-card">
+                            <div class="p-icon">🌎</div>
+                            <h3>En la sociedad</h3>
+                            <p>Rechazando la discriminación y respetando las diferencias culturales.</p>
+                        </div>
+                    </div>
+
+                    <p class="ppt-final">CULTURA DE PAZ · RESPETO · DIÁLOGO · SOLIDARIDAD</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- BOTÓN LATERAL DE NAVEGACIÓN -->
+        <div class="ppt-nav">
+            <button class="ppt-nav-btn" id="navDown" aria-label="Bajar sección">↓</button>
+            <div class="ppt-progress"><div class="ppt-progress-fill" id="progressFill"></div></div>
+            <button class="ppt-nav-btn" id="navUp" aria-label="Subir sección">↑</button>
+            <span class="ppt-counter" id="slideCounter">01 / 06</span>
+        </div>
+
+        <footer class="footer">NEXUS · CULTURA DE PAZ © 2026 — WILSON</footer>
+
+    </main>
+</div>
+
+<script>
+/* ===== FECHA ===== */
+const currentDate = document.getElementById("currentDate");
+if (currentDate) {
+    currentDate.textContent = new Date().toLocaleDateString("es-PE", {
+        weekday: "long", day: "numeric", month: "long", year: "numeric"
+    });
+}
+
+/* ===== MODO OSCURO ===== */
+const themeBtn = document.getElementById("themeBtn");
+if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        themeBtn.textContent = document.body.classList.contains("dark") ? "☾" : "☼";
+    });
+}
+
+/* ===== NAVEGACIÓN PPT ===== */
+const slides = document.querySelectorAll("[data-slide]");
+const navDown = document.getElementById("navDown");
+const navUp = document.getElementById("navUp");
+const progressFill = document.getElementById("progressFill");
+const slideCounter = document.getElementById("slideCounter");
+let current = 0;
+
+function goToSlide(i) {
+    current = Math.max(0, Math.min(slides.length - 1, i));
+    slides[current].scrollIntoView({ behavior: "smooth", block: "start" });
+    updateNav();
+}
+
+function updateNav() {
+    let activeIndex = 0;
+    slides.forEach((s, i) => {
+        const rect = s.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            activeIndex = i;
+        }
+    });
+    current = activeIndex;
+
+    const pct = ((current + 1) / slides.length) * 100;
+    if (progressFill) progressFill.style.height = pct + "%";
+    if (slideCounter) slideCounter.textContent =
+        String(current + 1).padStart(2, "0") + " / " + String(slides.length).padStart(2, "0");
+
+    if (navUp) navUp.style.opacity = current === 0 ? "0.35" : "1";
+    if (navDown) navDown.style.opacity = current === slides.length - 1 ? "0.35" : "1";
+}
+
+if (navDown) navDown.addEventListener("click", () => goToSlide(current + 1));
+if (navUp)   navUp.addEventListener("click",   () => goToSlide(current - 1));
+
+window.addEventListener("scroll", updateNav, { passive: true });
+window.addEventListener("resize", updateNav);
+updateNav();
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown" || e.key === "PageDown") goToSlide(current + 1);
+    if (e.key === "ArrowUp"   || e.key === "PageUp")   goToSlide(current - 1);
+});
+
+/* ===== PARTÍCULAS DE PAZ (hojas flotantes) ===== */
+function createPazParticles(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    for (let i = 0; i < 30; i++) {
+        const p = document.createElement("div");
+        p.className = "paz-particle";
+        p.style.left = Math.random() * 100 + "%";
+        p.style.top = Math.random() * 100 + "%";
+        p.style.animationDelay = (Math.random() * 6) + "s";
+        p.style.animationDuration = (5 + Math.random() * 5) + "s";
+        const size = 4 + Math.random() * 6;
+        p.style.width = size + "px";
+        p.style.height = size + "px";
+        container.appendChild(p);
+    }
+}
+createPazParticles("pazParticles");
+createPazParticles("pazParticles2");
+</script>
+
+</body>
+</html>

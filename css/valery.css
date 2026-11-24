@@ -1,0 +1,749 @@
+/* =========================================
+   TEMA VALERY — ROJO (claro/oscuro alternado)
+   Animación: pulso de alerta sutil
+========================================= */
+
+:root {
+    --rojo-dark:    #1a0508;
+    --rojo-darker:  #0f0205;
+    --rojo-primary: #e63946;
+    --rojo-light:   #ff6b6b;
+    --rojo-soft:    #ff9b9b;
+    --rojo-cream:   #fef5f6;   /* fondo claro rosado */
+    --rojo-ink:     #2b0a0e;   /* texto oscuro para claro */
+    --rojo-muted:   #8a5a60;
+    --rojo-border:  #3a1015;
+    --rojo-glow:    rgba(230, 57, 70, .45);
+}
+
+/* =========================================
+   APLICAR TEMA AL DASHBOARD
+========================================= */
+body.theme-rojo {
+    --accent: #e63946;
+    --accent-light: #ff6b6b;
+    --accent-glow: rgba(230,57,70,.4);
+}
+
+body.theme-rojo .main {
+    background: #fef5f6;
+}
+
+body.theme-rojo .nav-item.active {
+    background: var(--rojo-primary) !important;
+    color: #fff !important;
+    box-shadow: 0 0 18px var(--rojo-glow);
+}
+body.theme-rojo .nav-item.active .nav-icon { color: #fff !important; }
+body.theme-rojo .nav-item:hover:not(.active) {
+    background: rgba(230,57,70,.15);
+    color: var(--rojo-soft);
+}
+body.theme-rojo .nav-item:hover:not(.active) .nav-icon {
+    color: var(--rojo-soft);
+}
+body.theme-rojo .topbar {
+    border-bottom: 2px solid var(--rojo-primary);
+}
+body.theme-rojo .breadcrumb strong {
+    color: var(--rojo-primary);
+}
+body.theme-rojo .icon-btn:hover {
+    border-color: var(--rojo-primary);
+    color: var(--rojo-primary);
+}
+
+/* =========================================
+   PPT WRAPPER BASE
+========================================= */
+.ppt-wrapper { position: relative; width: 100%; }
+
+.ppt-slide {
+    position: relative;
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 8%;
+    overflow: hidden;
+    border-bottom: 1px solid var(--rojo-border);
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2;
+    max-width: 980px;
+    width: 100%;
+}
+.slide-content.center { text-align: center; }
+.slide-content.wide { max-width: 1200px; }
+
+/* =========================================
+   SLIDE OSCURA
+========================================= */
+.ppt-slide.slide-dark {
+    background: var(--rojo-dark);
+    color: #f5e6e8;
+}
+.slide-dark .slide-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at top left, rgba(230,57,70,.15), transparent 55%),
+        radial-gradient(ellipse at bottom right, rgba(230,57,70,.1), transparent 55%),
+        var(--rojo-dark);
+    z-index: 0;
+}
+.slide-dark .grid-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(230,57,70,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(230,57,70,.08) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+/* =========================================
+   SLIDE CLARA (rosado suave)
+========================================= */
+.ppt-slide.slide-light {
+    background: var(--rojo-cream);
+    color: var(--rojo-ink);
+}
+.slide-light::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top right, rgba(230,57,70,.06), transparent 50%),
+        radial-gradient(circle at bottom left, rgba(230,57,70,.04), transparent 50%);
+    z-index: 0;
+}
+.slide-light .slide-content { z-index: 2; }
+
+/* =========================================
+   TEXTOS
+========================================= */
+.ppt-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+    padding: 6px 14px;
+    border-radius: 30px;
+}
+.slide-dark .ppt-tag {
+    color: var(--rojo-soft);
+    border: 1px solid rgba(230,57,70,.5);
+    background: rgba(230,57,70,.1);
+}
+.slide-light .ppt-tag {
+    color: var(--rojo-primary);
+    border: 1px solid rgba(230,57,70,.35);
+    background: rgba(230,57,70,.06);
+}
+
+.ppt-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(48px, 7.5vw, 110px);
+    font-weight: 900;
+    line-height: .9;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    color: #fff;
+}
+.ppt-title span { color: var(--rojo-soft); }
+
+.ppt-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(34px, 5vw, 68px);
+    font-weight: 900;
+    line-height: .95;
+    margin-bottom: 25px;
+}
+.slide-dark .ppt-heading { color: #fff; }
+.slide-dark .ppt-heading span { color: var(--rojo-soft); }
+.slide-light .ppt-heading { color: var(--rojo-ink); }
+.slide-light .ppt-heading span { color: var(--rojo-primary); }
+
+.ppt-subtitle {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #d4bcc0;
+    max-width: 680px;
+    margin: 0 auto 30px;
+}
+
+.ppt-text {
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 850px;
+    margin-bottom: 22px;
+}
+.slide-dark .ppt-text { color: #e0ccd0; }
+.slide-light .ppt-text { color: var(--rojo-muted); }
+.slide-light .ppt-text strong { color: var(--rojo-primary); }
+.slide-dark .ppt-text strong { color: var(--rojo-soft); }
+
+.ppt-text.center-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ppt-author {
+    margin-top: 35px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--rojo-soft);
+    font-weight: 700;
+}
+
+.ppt-final {
+    margin-top: 35px;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--rojo-soft);
+}
+
+.ppt-source {
+    margin-top: 20px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--rojo-muted);
+    font-style: italic;
+    text-align: right;
+}
+
+/* =========================================
+   QUESTION BLOCK (slide 2)
+========================================= */
+.question-block {
+    margin-top: 30px;
+    padding: 28px 32px;
+    background: linear-gradient(120deg, rgba(230,57,70,.08), rgba(230,57,70,.03));
+    border-left: 4px solid var(--rojo-primary);
+    border-radius: 10px;
+    max-width: 850px;
+}
+.q-label {
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: var(--rojo-primary);
+    margin-bottom: 10px;
+}
+.question-block p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--rojo-ink);
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* =========================================
+   CHANGE GRID (slide 3)
+========================================= */
+.change-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    align-items: center;
+    margin: 30px 0;
+}
+.change-card {
+    padding: 24px 26px;
+    border-radius: 12px;
+    border: 1px solid var(--rojo-border);
+    background: linear-gradient(145deg, rgba(230,57,70,.1), rgba(15,2,5,.6));
+    transition: .3s;
+}
+.change-card.new {
+    border-color: rgba(230,57,70,.5);
+    box-shadow: 0 0 25px rgba(230,57,70,.15);
+}
+.change-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--rojo-soft);
+}
+.ch-label {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: var(--rojo-soft);
+    margin-bottom: 8px;
+}
+.change-card h3 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+.change-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #d4bcc0;
+}
+.change-arrow {
+    font-size: 30px;
+    color: var(--rojo-soft);
+    font-weight: bold;
+    animation: arrowPulse 2s ease-in-out infinite;
+}
+@keyframes arrowPulse {
+    0%, 100% { transform: translateX(0); opacity: .7; }
+    50%      { transform: translateX(6px); opacity: 1; }
+}
+
+/* =========================================
+   STATS GRID (slide 4)
+========================================= */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+}
+.stat-card {
+    background: #fff;
+    border: 1px solid rgba(230,57,70,.2);
+    border-radius: 14px;
+    padding: 26px 18px;
+    text-align: center;
+    transition: .3s;
+    position: relative;
+    overflow: hidden;
+}
+.stat-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--rojo-primary), var(--rojo-light));
+}
+.stat-card.highlight {
+    background: linear-gradient(180deg, #fff, #fef0f1);
+    border-color: var(--rojo-primary);
+    box-shadow: 0 8px 25px rgba(230,57,70,.12);
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--rojo-primary);
+    box-shadow: 0 12px 30px rgba(230,57,70,.15);
+}
+.s-big {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 52px;
+    font-weight: 900;
+    color: var(--rojo-primary);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.stat-card.highlight .s-big {
+    color: var(--rojo-primary);
+    text-shadow: 0 0 20px rgba(230,57,70,.2);
+}
+.s-label {
+    font-size: 12px;
+    color: var(--rojo-muted);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* =========================================
+   TWO COL (slide 5)
+========================================= */
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+}
+.legal-block {
+    padding: 28px 26px;
+    border-radius: 14px;
+    background: linear-gradient(160deg, rgba(230,57,70,.1), rgba(15,2,5,.7));
+    border: 1px solid rgba(230,57,70,.3);
+    transition: .3s;
+}
+.legal-block:hover {
+    border-color: rgba(230,57,70,.6);
+    transform: translateY(-4px);
+}
+.l-label {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: var(--rojo-soft);
+    margin-bottom: 12px;
+}
+.legal-block h3 {
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 14px;
+    font-weight: 800;
+}
+.legal-block p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #d4bcc0;
+    margin-bottom: 12px;
+}
+.legal-block strong { color: var(--rojo-soft); }
+.legal-block .note {
+    font-size: 12px;
+    color: #a88a8e;
+    font-style: italic;
+    border-top: 1px dashed rgba(230,57,70,.3);
+    padding-top: 12px;
+    margin-top: 12px;
+}
+
+/* =========================================
+   GALTUNG GRID (slide 6)
+========================================= */
+.galtung-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+.galtung-card {
+    background: #fff;
+    border: 1px solid rgba(230,57,70,.15);
+    border-radius: 14px;
+    padding: 26px 22px;
+    transition: .3s;
+    box-shadow: 0 4px 15px rgba(230,57,70,.05);
+    position: relative;
+    overflow: hidden;
+}
+.galtung-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 0; height: 3px;
+    background: var(--rojo-primary);
+    transition: width .35s;
+}
+.galtung-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--rojo-primary);
+    box-shadow: 0 12px 30px rgba(230,57,70,.15);
+}
+.galtung-card:hover::before { width: 100%; }
+.g-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 38px;
+    font-weight: 900;
+    color: var(--rojo-primary);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.galtung-card h3 {
+    font-size: 16px;
+    color: var(--rojo-ink);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+.galtung-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--rojo-muted);
+}
+
+/* QUOTE BLOCK */
+.quote-block {
+    position: relative;
+    margin-top: 30px;
+    padding: 28px 32px 28px 70px;
+    background: #fff;
+    border-left: 4px solid var(--rojo-primary);
+    border-radius: 10px;
+    box-shadow: 0 8px 30px rgba(230,57,70,.08);
+    max-width: 900px;
+}
+.quote-mark {
+    position: absolute;
+    left: 18px;
+    top: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 90px;
+    line-height: 1;
+    color: var(--rojo-primary);
+    opacity: .25;
+    font-weight: 900;
+}
+.quote-block p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--rojo-ink);
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+.quote-block strong { color: var(--rojo-primary); }
+
+/* =========================================
+   SYNTHESIS BLOCK (slide 7)
+========================================= */
+.synthesis-block {
+    margin-top: 30px;
+    padding: 32px 36px;
+    border-radius: 14px;
+    background: linear-gradient(120deg, rgba(230,57,70,.2), rgba(15,2,5,.8));
+    border: 1px solid rgba(230,57,70,.4);
+    position: relative;
+    overflow: hidden;
+}
+.synthesis-block::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 4px;
+    background: var(--rojo-soft);
+    box-shadow: 0 0 15px var(--rojo-glow);
+}
+.syn-label {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: var(--rojo-soft);
+    margin-bottom: 12px;
+}
+.synthesis-block p {
+    font-size: 22px;
+    line-height: 1.5;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.syn-answer {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--rojo-soft);
+    font-style: italic;
+    border-top: 1px dashed rgba(230,57,70,.4);
+    padding-top: 12px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+/* =========================================
+   ALERTA — ANIMACIÓN SUTIL
+========================================= */
+.alerta-aura {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    z-index: 1;
+    pointer-events: none;
+    opacity: .5;
+}
+.alerta-aura.final-aura {
+    width: 600px;
+    height: 600px;
+    opacity: .45;
+}
+
+.alerta-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid var(--rojo-primary);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: alertaPulse 5s ease-out infinite;
+    box-shadow:
+        0 0 30px rgba(230,57,70,.4),
+        inset 0 0 20px rgba(230,57,70,.2);
+}
+.alerta-ring.ring-1 {
+    animation-delay: 0s;
+    border-color: var(--rojo-soft);
+}
+.alerta-ring.ring-2 {
+    animation-delay: 2.5s;
+    border-color: var(--rojo-primary);
+}
+@keyframes alertaPulse {
+    0% {
+        width: 150px;
+        height: 150px;
+        opacity: 0;
+    }
+    20% { opacity: 1; }
+    100% {
+        width: 800px;
+        height: 800px;
+        opacity: 0;
+        border-width: 1px;
+    }
+}
+
+/* Scan line (línea de escaneo sutil) */
+.alerta-scan {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(230,57,70,.6),
+        transparent
+    );
+    box-shadow: 0 0 15px rgba(230,57,70,.5);
+    animation: scanMove 6s linear infinite;
+}
+@keyframes scanMove {
+    0%   { top: 0%;   opacity: 0; }
+    10%  { opacity: 1; }
+    90%  { opacity: 1; }
+    100% { top: 100%; opacity: 0; }
+}
+
+/* Partículas sutiles */
+.alerta-particles {
+    position: absolute;
+    inset: 0;
+}
+.alerta-particle {
+    position: absolute;
+    background: var(--rojo-soft);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(230,57,70,.6);
+    animation: alertaFloat linear infinite;
+    opacity: 0;
+}
+@keyframes alertaFloat {
+    0%   { transform: translateY(0) scale(.5); opacity: 0; }
+    20%  { opacity: .7; }
+    80%  { opacity: .7; }
+    100% { transform: translateY(-250px) scale(1.2); opacity: 0; }
+}
+
+/* Título con brillo sutil */
+.alerta-slide .ppt-title span {
+    animation: rojoGlow 4s ease-in-out infinite;
+}
+@keyframes rojoGlow {
+    0%, 100% { text-shadow: 0 0 15px rgba(255,155,155,.3); }
+    50%      { text-shadow: 0 0 25px rgba(255,155,155,.5), 0 0 40px rgba(230,57,70,.3); }
+}
+
+/* =========================================
+   BOTÓN LATERAL DE NAVEGACIÓN
+========================================= */
+.ppt-nav {
+    position: fixed;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 999;
+    background: rgba(26,5,8,.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(230,57,70,.4);
+    border-radius: 50px;
+    padding: 14px 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.4);
+}
+.ppt-nav-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(230,57,70,.4);
+    background: rgba(230,57,70,.12);
+    color: var(--rojo-soft);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.ppt-nav-btn:hover {
+    background: var(--rojo-primary);
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--rojo-glow);
+}
+.ppt-progress {
+    width: 6px;
+    height: 120px;
+    background: rgba(230,57,70,.2);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+.ppt-progress-fill {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 12.5%;
+    background: linear-gradient(180deg, var(--rojo-soft), var(--rojo-primary));
+    transition: height .4s ease;
+    border-radius: 4px;
+    box-shadow: 0 0 15px var(--rojo-glow);
+}
+.ppt-counter {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--rojo-soft);
+    letter-spacing: 1px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 4px 0;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 1100px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .two-col { grid-template-columns: 1fr; }
+    .galtung-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 900px) {
+    .change-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .change-arrow {
+        transform: rotate(90deg);
+        text-align: center;
+    }
+    @keyframes arrowPulse {
+        0%, 100% { transform: rotate(90deg) translateX(0); opacity: .7; }
+        50%      { transform: rotate(90deg) translateX(6px); opacity: 1; }
+    }
+}
+
+@media (max-width: 700px) {
+    .ppt-slide { padding: 45px 6%; min-height: calc(100vh - 60px); }
+    .stats-grid { grid-template-columns: 1fr; }
+    .ppt-nav { right: 10px; padding: 10px 6px; gap: 8px; }
+    .ppt-nav-btn { width: 36px; height: 36px; font-size: 15px; }
+    .ppt-progress { height: 80px; }
+    .ppt-counter { font-size: 10px; }
+    .ppt-title { font-size: clamp(38px, 11vw, 60px); }
+    .ppt-heading { font-size: clamp(28px, 8vw, 44px); }
+    .alerta-aura { width: 400px; height: 400px; }
+    .synthesis-block p { font-size: 18px; }
+}

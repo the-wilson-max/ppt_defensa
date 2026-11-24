@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXUS | Edwin — Conflictos Socioambientales</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/edwin.css">
+</head>
+<body class="theme-purpura">
+
+<div class="app">
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo institucional">
+            <span class="logo-text">UNIVERSIDAD<br>SAN LUIS GONZAGA</span>
+        </div>
+
+        <div class="section-label">WORKSPACE</div>
+
+        <a class="nav-item" href="inicio.html">
+            <span class="nav-icon">◈</span>
+            <span class="nav-text">Inicio</span>
+        </a>
+        <a class="nav-item" href="1_wilson.html">
+            <span class="nav-icon">◈</span>
+            <span class="nav-text">WILSON</span>
+        </a>
+        <a class="nav-item" href="2_damaris.html">
+            <span class="nav-icon">◈</span>
+            <span class="nav-text">DAMARIS</span>
+        </a>
+        <a class="nav-item" href="3_alessandro.html">
+            <span class="nav-icon">◈</span>
+            <span class="nav-text">ALESSANDRO</span>
+        </a>
+        <a class="nav-item active" href="4_edwin.html">
+            <span class="nav-icon">◈</span>
+            <span class="nav-text">EDWIN</span>
+        </a>
+        <a class="nav-item" href="5_valery.html">
+            <span class="nav-icon">◈</span>
+            <span class="nav-text">VALERY</span>
+        </a>
+
+        <a class="nav-item" href="6_conclusion.html">
+            <span class="nav-icon">◈</span><span class="nav-text">FABRICIO</span>
+        </a>
+
+        <a class="nav-item active" href="7_preguntas.html">
+            <span class="nav-icon">◈</span><span class="nav-text">PREGUNTAS</span>
+        </a>
+        <div class="sidebar-bottom">
+            <div class="profile">
+                <div class="avatar">W</div>
+                <div class="profile-info">
+                    <strong>Wilson</strong>
+                    <small>Administrador</small>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- ==================== MAIN ==================== -->
+    <main class="main">
+
+        <header class="topbar">
+            <div class="breadcrumb">NEXUS / <strong>Edwin</strong></div>
+            <div class="top-actions">
+                <span class="date" id="currentDate"></span>
+                <button class="icon-btn" id="themeBtn">☼</button>
+            </div>
+        </header>
+
+
+        <!-- ==================== PPT WRAPPER ==================== -->
+        <div class="ppt-wrapper">
+
+            <!-- SLIDE 1 — PORTADA con animación Gojo -->
+            <section class="ppt-slide slide-dark" data-slide>
+                <div class="slide-bg grid-bg"></div>
+
+                <!-- Animación Gojo: energía púrpura -->
+                <div class="gojo-aura">
+                    <div class="gojo-ring ring-1"></div>
+                    <div class="gojo-ring ring-2"></div>
+                    <div class="gojo-ring ring-3"></div>
+                    <div class="gojo-core"></div>
+                    <div class="gojo-particles" id="gojoParticles"></div>
+                </div>
+
+                <div class="slide-content center" style="position:relative; z-index:3;">
+                    <span class="ppt-tag">01 / PRESENTACIÓN</span>
+                    <h1 class="ppt-title">CONFLICTOS<br><span>SOCIOAMBIENTALES.</span></h1>
+                    <p class="ppt-subtitle">
+                        Cuando comunidades, empresas, autoridades y otros actores tienen
+                        intereses contrapuestos sobre el uso, acceso o control de recursos
+                        naturales y los impactos de actividades extractivas.
+                    </p>
+                    <div class="ppt-author">EDWIN · Universidad San Luis Gonzaga</div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2 — ¿QUÉ SON? (oscura púrpura) -->
+            <section class="ppt-slide slide-dark" data-slide>
+                <div class="slide-bg"></div>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">02 / CONCEPTO</span>
+                    <h2 class="ppt-heading">¿QUÉ ES UN CONFLICTO<br><span>SOCIOAMBIENTAL?</span></h2>
+
+                    <p class="ppt-text">
+                        Un proceso dinámico entre actores estatales, sociales o privados
+                        que perciben que sus intereses, necesidades o valores son
+                        contradictorios respecto al ambiente y sus recursos.
+                    </p>
+
+                    <p class="ppt-text">
+                        Puede escalar a protestas, bloqueos o violencia cuando no existe
+                        diálogo, información adecuada ni mecanismos efectivos de resolución.
+                    </p>
+
+                    <div class="highlight-stat">
+                        <div class="stat-number">54%</div>
+                        <div class="stat-desc">
+                            De los 161 conflictos activos en Perú (marzo 2026)
+                            son <strong>socioambientales</strong> — 87 casos.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3 — ACTORES (CLARA / lavanda) -->
+            <section class="ppt-slide slide-light" data-slide>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">03 / ACTORES</span>
+                    <h2 class="ppt-heading">ACTORES<br><span>FRECUENTES</span></h2>
+
+                    <div class="actors-grid">
+                        <div class="actor-card">
+                            <div class="a-icon">🏞️</div>
+                            <h3>Comunidades</h3>
+                            <p>Comunidades campesinas y pueblos indígenas u originarios.</p>
+                        </div>
+                        <div class="actor-card">
+                            <div class="a-icon">🏭</div>
+                            <h3>Empresas</h3>
+                            <p>Mineras, petroleras, energéticas o agroindustriales.</p>
+                        </div>
+                        <div class="actor-card">
+                            <div class="a-icon">🏛️</div>
+                            <h3>Estado</h3>
+                            <p>Gobierno nacional, gobiernos regionales y locales.</p>
+                        </div>
+                        <div class="actor-card">
+                            <div class="a-icon">🤝</div>
+                            <h3>Organizaciones</h3>
+                            <p>Sociales, sindicatos, ONG y ciudadanía afectada.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4 — CAUSAS (oscura púrpura) -->
+            <section class="ppt-slide slide-dark" data-slide>
+                <div class="slide-bg grid-bg"></div>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">04 / CAUSAS</span>
+                    <h2 class="ppt-heading">PRINCIPALES<br><span>CAUSAS</span></h2>
+
+                    <div class="causes-list">
+                        <div class="cause-item">
+                            <div class="c-num">01</div>
+                            <div class="c-content">
+                                <h3>Agua</h3>
+                                <p>Disputas por el uso y contaminación de fuentes hídricas, especialmente en zonas mineras.</p>
+                            </div>
+                        </div>
+                        <div class="cause-item">
+                            <div class="c-num">02</div>
+                            <div class="c-content">
+                                <h3>Territorio y consulta</h3>
+                                <p>Proyectos que se desarrollan cerca de comunidades sin participación, consentimiento o beneficios percibidos como justos.</p>
+                            </div>
+                        </div>
+                        <div class="cause-item">
+                            <div class="c-num">03</div>
+                            <div class="c-content">
+                                <h3>Contaminación</h3>
+                                <p>Preocupación por relaves mineros, derrames de hidrocarburos, ruido, pérdida de suelos y afectación de la salud.</p>
+                            </div>
+                        </div>
+                        <div class="cause-item">
+                            <div class="c-num">04</div>
+                            <div class="c-content">
+                                <h3>Desigualdad territorial</h3>
+                                <p>Las comunidades asumen los costos ambientales, mientras los beneficios económicos se concentran en empresas, el Estado u otras regiones.</p>
+                            </div>
+                        </div>
+                        <div class="cause-item">
+                            <div class="c-num">05</div>
+                            <div class="c-content">
+                                <h3>Débil gobernanza</h3>
+                                <p>Información ambiental poco clara, fiscalización insuficiente, consulta previa deficiente y baja confianza en las autoridades.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 5 — SITUACIÓN ACTUAL (CLARA / lavanda) -->
+            <section class="ppt-slide slide-light" data-slide>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">05 / SITUACIÓN ACTUAL</span>
+                    <h2 class="ppt-heading">CIFRAS AL<br><span>MARZO 2026</span></h2>
+
+                    <p class="ppt-text">
+                        La minería es el sector más asociado a la conflictividad socioambiental.
+                        De 98 conflictos socioambientales activos y latentes, 65 (66.3%) estaban
+                        vinculados a minería y 16 (16.3%) a hidrocarburos.
+                    </p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="s-big">161</div>
+                            <div class="s-label">Conflictos activos totales</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="s-big">87</div>
+                            <div class="s-label">Socioambientales activos (54%)</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="s-big">98</div>
+                            <div class="s-label">Socioambientales activos y latentes</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="s-big">65</div>
+                            <div class="s-label">Vinculados a minería (66.3%)</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="s-big">16</div>
+                            <div class="s-label">Vinculados a hidrocarburos (16.3%)</div>
+                        </div>
+                    </div>
+
+                    <p class="ppt-source">Fuente: Defensoría del Pueblo del Perú</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 6 — CONSECUENCIAS (oscura púrpura) -->
+            <section class="ppt-slide slide-dark" data-slide>
+                <div class="slide-bg"></div>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">06 / CONSECUENCIAS</span>
+                    <h2 class="ppt-heading">CONSECUENCIAS DE LOS<br><span>CONFLICTOS</span></h2>
+
+                    <div class="consequences-list">
+                        <div class="cons-card">
+                            <div class="cons-icon">✊</div>
+                            <p>Protestas, paros, bloqueos de vías y enfrentamientos.</p>
+                        </div>
+                        <div class="cons-card">
+                            <div class="cons-icon">⏸️</div>
+                            <p>Interrupción temporal de operaciones mineras o energéticas.</p>
+                        </div>
+                        <div class="cons-card">
+                            <div class="cons-icon">💔</div>
+                            <p>Deterioro de la confianza entre comunidades, empresas y Estado.</p>
+                        </div>
+                        <div class="cons-card">
+                            <div class="cons-icon">📉</div>
+                            <p>Costos económicos, sociales y ambientales.</p>
+                        </div>
+                        <div class="cons-card wide-card">
+                            <div class="cons-icon">⚠️</div>
+                            <p>Riesgo de violaciones de derechos humanos cuando la respuesta estatal prioriza la represión sobre el diálogo.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7 — SOLUCIONES (CLARA / lavanda) -->
+            <section class="ppt-slide slide-light" data-slide>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">07 / SOLUCIONES</span>
+                    <h2 class="ppt-heading">POSIBLES<br><span>SOLUCIONES</span></h2>
+
+                    <div class="solutions-grid">
+                        <div class="sol-card">
+                            <div class="sol-num">01</div>
+                            <h3>Diálogo temprano</h3>
+                            <p>Incorporar a las comunidades antes de aprobar o ejecutar proyectos.</p>
+                        </div>
+                        <div class="sol-card">
+                            <div class="sol-num">02</div>
+                            <h3>Consulta previa</h3>
+                            <p>Libre e informada, especialmente con pueblos indígenas u originarios, conforme a estándares internacionales.</p>
+                        </div>
+                        <div class="sol-card">
+                            <div class="sol-num">03</div>
+                            <h3>Transparencia</h3>
+                            <p>Publicar estudios de impacto ambiental, planes de manejo de agua, compensaciones y beneficios.</p>
+                        </div>
+                        <div class="sol-card">
+                            <div class="sol-num">04</div>
+                            <h3>Monitoreo participativo</h3>
+                            <p>Permitir que comunidades verifiquen calidad del agua, aire y suelos.</p>
+                        </div>
+                        <div class="sol-card">
+                            <div class="sol-num">05</div>
+                            <h3>Distribución justa</h3>
+                            <p>Canon, regalías, empleo local, infraestructura y fondos para desarrollo territorial.</p>
+                        </div>
+                        <div class="sol-card">
+                            <div class="sol-num">06</div>
+                            <h3>Fortalecimiento institucional</h3>
+                            <p>Fiscalización ambiental efectiva y mecanismos accesibles de solución de controversias.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8 — CIERRE con animación Gojo -->
+            <section class="ppt-slide slide-dark final" data-slide>
+                <div class="slide-bg grid-bg"></div>
+
+                <!-- Animación Gojo en el cierre -->
+                <div class="gojo-aura final-aura">
+                    <div class="gojo-ring ring-1"></div>
+                    <div class="gojo-ring ring-2"></div>
+                    <div class="gojo-core"></div>
+                </div>
+
+                <div class="slide-content center" style="position:relative; z-index:3;">
+                    <span class="ppt-tag">08 / CONCLUSIÓN</span>
+                    <h2 class="ppt-heading">DEL CONFLICTO<br><span>AL DIÁLOGO.</span></h2>
+
+                    <p class="ppt-text center-text">
+                        Los conflictos socioambientales no se resuelven con represión:
+                        se gestionan con <strong>diálogo temprano, transparencia,
+                        participación y distribución justa de beneficios</strong>.
+                    </p>
+
+                    <p class="ppt-final">AGUA · TERRITORIO · PARTICIPACIÓN · JUSTICIA</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- BOTÓN LATERAL DE NAVEGACIÓN -->
+        <div class="ppt-nav">
+            <button class="ppt-nav-btn" id="navDown" aria-label="Bajar sección">↓</button>
+            <div class="ppt-progress"><div class="ppt-progress-fill" id="progressFill"></div></div>
+            <button class="ppt-nav-btn" id="navUp" aria-label="Subir sección">↑</button>
+            <span class="ppt-counter" id="slideCounter">01 / 08</span>
+        </div>
+
+        <footer class="footer">
+            NEXUS PRESENTATION © 2026 — ALL RIGHTS RESERVED.
+        </footer>
+
+    </main>
+
+</div>
+
+<script>
+/* ===== FECHA ===== */
+const currentDate = document.getElementById("currentDate");
+if (currentDate) {
+    currentDate.textContent = new Date().toLocaleDateString("es-PE", {
+        weekday: "long", day: "numeric", month: "long", year: "numeric"
+    });
+}
+
+/* ===== MODO OSCURO ===== */
+const themeBtn = document.getElementById("themeBtn");
+if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        themeBtn.textContent = document.body.classList.contains("dark") ? "☾" : "☼";
+    });
+}
+
+/* ===== NAVEGACIÓN PPT ===== */
+const slides = document.querySelectorAll("[data-slide]");
+const navDown = document.getElementById("navDown");
+const navUp = document.getElementById("navUp");
+const progressFill = document.getElementById("progressFill");
+const slideCounter = document.getElementById("slideCounter");
+let current = 0;
+
+function goToSlide(i) {
+    current = Math.max(0, Math.min(slides.length - 1, i));
+    slides[current].scrollIntoView({ behavior: "smooth", block: "start" });
+    updateNav();
+}
+
+function updateNav() {
+    let activeIndex = 0;
+    slides.forEach((s, i) => {
+        const rect = s.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            activeIndex = i;
+        }
+    });
+    current = activeIndex;
+
+    const pct = ((current + 1) / slides.length) * 100;
+    if (progressFill) progressFill.style.height = pct + "%";
+    if (slideCounter) slideCounter.textContent =
+        String(current + 1).padStart(2, "0") + " / " + String(slides.length).padStart(2, "0");
+
+    if (navUp) navUp.style.opacity = current === 0 ? "0.35" : "1";
+    if (navDown) navDown.style.opacity = current === slides.length - 1 ? "0.35" : "1";
+}
+
+if (navDown) navDown.addEventListener("click", () => goToSlide(current + 1));
+if (navUp)   navUp.addEventListener("click",   () => goToSlide(current - 1));
+
+window.addEventListener("scroll", updateNav, { passive: true });
+window.addEventListener("resize", updateNav);
+updateNav();
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown" || e.key === "PageDown") goToSlide(current + 1);
+    if (e.key === "ArrowUp"   || e.key === "PageUp")   goToSlide(current - 1);
+});
+
+/* ===== PARTÍCULAS GOJO (energía púrpura flotante) ===== */
+const particlesContainer = document.getElementById("gojoParticles");
+if (particlesContainer) {
+    for (let i = 0; i < 40; i++) {
+        const p = document.createElement("div");
+        p.className = "particle";
+        p.style.left = Math.random() * 100 + "%";
+        p.style.top = Math.random() * 100 + "%";
+        p.style.animationDelay = (Math.random() * 5) + "s";
+        p.style.animationDuration = (3 + Math.random() * 4) + "s";
+        const size = 2 + Math.random() * 4;
+        p.style.width = size + "px";
+        p.style.height = size + "px";
+        particlesContainer.appendChild(p);
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXUS | Valery — Conflictos Sociales, Violencia e Ilegalidad</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/valery.css">
+</head>
+<body class="theme-rojo">
+
+<div class="app">
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo institucional">
+            <span class="logo-text">UNIVERSIDAD<br>SAN LUIS GONZAGA</span>
+        </div>
+
+        <div class="section-label">WORKSPACE</div>
+
+        <a class="nav-item" href="inicio.html">
+            <span class="nav-icon">◈</span><span class="nav-text">Inicio</span>
+        </a>
+        <a class="nav-item" href="1_wilson.html">
+            <span class="nav-icon">◈</span><span class="nav-text">WILSON</span>
+        </a>
+        <a class="nav-item" href="2_damaris.html">
+            <span class="nav-icon">◈</span><span class="nav-text">DAMARIS</span>
+        </a>
+        <a class="nav-item" href="3_alessandro.html">
+            <span class="nav-icon">◈</span><span class="nav-text">ALESSANDRO</span>
+        </a>
+        <a class="nav-item" href="4_edwin.html">
+            <span class="nav-icon">◈</span><span class="nav-text">EDWIN</span>
+        </a>
+        <a class="nav-item active" href="5_valery.html">
+            <span class="nav-icon">◈</span><span class="nav-text">VALERY</span>
+        </a>
+
+        <a class="nav-item" href="6_conclusion.html">
+            <span class="nav-icon">◈</span><span class="nav-text">FABRICIO</span>
+        </a>
+
+        <a class="nav-item active" href="7_preguntas.html">
+            <span class="nav-icon">◈</span><span class="nav-text">PREGUNTAS</span>
+        </a>
+        <div class="sidebar-bottom">
+            <div class="profile">
+                <div class="avatar">W</div>
+                <div class="profile-info">
+                    <strong>Wilson</strong>
+                    <small>Administrador</small>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- ==================== MAIN ==================== -->
+    <main class="main">
+
+        <header class="topbar">
+            <div class="breadcrumb">NEXUS / <strong>Valery</strong></div>
+            <div class="top-actions">
+                <span class="date" id="currentDate"></span>
+                <button class="icon-btn" id="themeBtn">☼</button>
+            </div>
+        </header>
+
+
+        <!-- ==================== PPT WRAPPER ==================== -->
+        <div class="ppt-wrapper">
+
+            <!-- SLIDE 1 — PORTADA (oscura con alerta sutil) -->
+            <section class="ppt-slide slide-dark alerta-slide" data-slide>
+                <div class="slide-bg grid-bg"></div>
+
+                <!-- ANIMACIÓN DE ALERTA SUTIL -->
+                <div class="alerta-aura">
+                    <div class="alerta-ring ring-1"></div>
+                    <div class="alerta-ring ring-2"></div>
+                    <div class="alerta-scan"></div>
+                    <div class="alerta-particles" id="alertaParticles"></div>
+                </div>
+
+                <div class="slide-content center" style="position:relative; z-index:3;">
+                    <span class="ppt-tag">01 / PRESENTACIÓN</span>
+                    <h1 class="ppt-title">CONFLICTOS<br><span>VIOLENCIA E ILEGALIDAD.</span></h1>
+                    <p class="ppt-subtitle">
+                        ¿Qué relación existe entre los conflictos sociales, la violencia
+                        y la ilegalidad en el Perú de hoy?
+                    </p>
+                    <div class="ppt-author">VALERY · Universidad San Luis Gonzaga</div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2 — EL CASO (clara) -->
+            <section class="ppt-slide slide-light" data-slide>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">02 / EL CASO</span>
+                    <h2 class="ppt-heading">ESTADO DE EMERGENCIA<br><span>EN CAJAMARCA</span></h2>
+
+                    <p class="ppt-text">
+                        El <strong>28 de agosto de 2026</strong>, el Gobierno declaró el estado de
+                        emergencia por <strong>60 días</strong> en diez distritos de Cajamarca, debido
+                        al incremento de la minería ilegal, delitos conexos y hechos de violencia.
+                    </p>
+
+                    <p class="ppt-text">
+                        La estrategia incluyó drones con cámaras térmicas, labores de inteligencia
+                        y controles en las rutas para detectar tráfico de explosivos y armas.
+                    </p>
+
+                    <div class="question-block">
+                        <div class="q-label">PREGUNTA CENTRAL</div>
+                        <p>
+                            ¿Qué relación hay entre los conflictos sociales, la violencia
+                            y la ilegalidad en el Perú de hoy?
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3 — QUÉ ESTÁ CAMBIANDO (oscura) -->
+            <section class="ppt-slide slide-dark" data-slide>
+                <div class="slide-bg"></div>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">03 / DESARROLLO</span>
+                    <h2 class="ppt-heading">¿QUÉ ESTÁ<br><span>CAMBIANDO?</span></h2>
+
+                    <p class="ppt-text">
+                        Antes, el conflicto típico enfrentaba a una comunidad con una empresa formal.
+                        Hoy la Defensoría advierte que las poblaciones enfrentan también a
+                        <strong>organizaciones de minería ilegal, plantas de beneficio, transportistas
+                        y redes económicas</strong> que actúan al margen de la ley.
+                    </p>
+
+                    <div class="change-grid">
+                        <div class="change-card old">
+                            <div class="ch-label">ANTES</div>
+                            <h3>Conflicto típico</h3>
+                            <p>Comunidad vs. empresa formal</p>
+                        </div>
+                        <div class="change-arrow">→</div>
+                        <div class="change-card new">
+                            <div class="ch-label">HOY</div>
+                            <h3>Conflicto complejo</h3>
+                            <p>Poblaciones vs. economías ilegales con violencia organizada</p>
+                        </div>
+                    </div>
+
+                    <p class="ppt-text">
+                        Eso complica la labor del Estado: es difícil identificar a los responsables
+                        y crece la violencia del crimen organizado.
+                    </p>
+                </div>
+            </section>
+
+            <!-- SLIDE 4 — LAS CIFRAS (clara) -->
+            <section class="ppt-slide slide-light" data-slide>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">04 / CIFRAS</span>
+                    <h2 class="ppt-heading">REPORTE N.° 271<br><span>SEPTIEMBRE 2026</span></h2>
+
+                    <p class="ppt-text">
+                        Según el Reporte N.° 271 de la Defensoría del Pueblo, hay
+                        <strong>193 conflictos sociales</strong>, de los cuales <strong>144 están activos</strong>.
+                    </p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="s-big">193</div>
+                            <div class="s-label">Conflictos sociales totales</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="s-big">144</div>
+                            <div class="s-label">Conflictos activos</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="s-big">91</div>
+                            <div class="s-label">Socioambientales</div>
+                        </div>
+                        <div class="stat-card highlight">
+                            <div class="s-big">65.9%</div>
+                            <div class="s-label">Vinculados a minería</div>
+                        </div>
+                    </div>
+
+                    <p class="ppt-source">Fuente: Defensoría del Pueblo — Reporte N.° 271</p>
+                </div>
+            </section>
+
+            <!-- SLIDE 5 — REINFO Y JUSTICIA ANDINA (oscura) -->
+            <section class="ppt-slide slide-dark" data-slide>
+                <div class="slide-bg grid-bg"></div>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">05 / MARCO LEGAL</span>
+                    <h2 class="ppt-heading">REINFO Y<br><span>JUSTICIA ANDINA</span></h2>
+
+                    <div class="two-col">
+                        <div class="legal-block">
+                            <div class="l-label">REINFO</div>
+                            <h3>Registro para formalizar mineros informales</h3>
+                            <p>
+                                Vence el <strong>31 de diciembre de 2026</strong>. El Instituto de
+                                Ingenieros de Minas del Perú sostiene que la minería ilegal es una
+                                amenaza para la estabilidad del Estado por su expansión, impactos
+                                ambientales y vínculo con la violencia.
+                            </p>
+                            <p class="note">
+                                Sobre prorrogar o no el Reinfo hay opiniones distintas.
+                            </p>
+                        </div>
+
+                        <div class="legal-block">
+                            <div class="l-label">JUSTICIA ANDINA</div>
+                            <h3>33 comunidades del río Nanay (Loreto)</h3>
+                            <p>
+                                Llevaron el caso ante la justicia andina. El <strong>Tribunal de
+                                Justicia de la Comunidad Andina</strong> admitió su demanda contra
+                                el Estado peruano.
+                            </p>
+                            <p class="note">
+                                Esto no significa que el Perú ya haya sido condenado.
+                                La población misma está exigiendo respuestas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6 — EXPLICACIÓN TEÓRICA (clara) -->
+            <section class="ppt-slide slide-light" data-slide>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">06 / TEORÍA</span>
+                    <h2 class="ppt-heading">JOHAN GALTUNG<br><span>TRES TIPOS DE VIOLENCIA</span></h2>
+
+                    <p class="ppt-text">
+                        Para entender por qué ocurre esto, nos sirve Johan Galtung, quien
+                        distingue tres tipos de violencia:
+                    </p>
+
+                    <div class="galtung-grid">
+                        <div class="galtung-card">
+                            <div class="g-num">01</div>
+                            <h3>Violencia directa</h3>
+                            <p>Agresiones y homicidios.</p>
+                        </div>
+                        <div class="galtung-card">
+                            <div class="g-num">02</div>
+                            <h3>Violencia estructural</h3>
+                            <p>Pobreza, exclusión y ausencia del Estado.</p>
+                        </div>
+                        <div class="galtung-card">
+                            <div class="g-num">03</div>
+                            <h3>Violencia cultural</h3>
+                            <p>Normaliza a las otras dos.</p>
+                        </div>
+                    </div>
+
+                    <div class="quote-block">
+                        <div class="quote-mark">"</div>
+                        <p>
+                            Donde el Estado no llega, la ilegalidad ocupa su lugar.
+                            El especialista Iván Arenas plantea que el Estado debe dejar de ver
+                            la minería ilegal como conflictos aislados y enfrentarla como una
+                            <strong>red económica criminal organizada</strong>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7 — SÍNTESIS (oscura) -->
+            <section class="ppt-slide slide-dark" data-slide>
+                <div class="slide-bg"></div>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">07 / SÍNTESIS</span>
+                    <h2 class="ppt-heading">UN NUEVO TIPO<br><span>DE CONFLICTO</span></h2>
+
+                    <p class="ppt-text">
+                        En síntesis, los conflictos sociales en el Perú ya no son solo comunidades
+                        frente a empresas formales. También son <strong>poblaciones frente a
+                        economías ilegales</strong> que usan la violencia para controlar territorios,
+                        con la minería ilegal como el ejemplo más claro.
+                    </p>
+
+                    <p class="ppt-text">
+                        Esa violencia directa se alimenta de la exclusión y la ausencia del Estado,
+                        y por eso las respuestas deben ir más allá del control policial.
+                    </p>
+
+                    <div class="synthesis-block">
+                        <div class="syn-label">LA PREGUNTA QUE SIGUE</div>
+                        <p>
+                            ¿Cómo evitamos que estos conflictos lleguen a la violencia?
+                        </p>
+                        <span class="syn-answer">Ahí entran el diálogo democrático y las mesas de concertación.</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8 — CIERRE (oscura con alerta sutil) -->
+            <section class="ppt-slide slide-dark final alerta-slide" data-slide>
+                <div class="slide-bg grid-bg"></div>
+
+                <div class="alerta-aura final-aura">
+                    <div class="alerta-ring ring-1"></div>
+                    <div class="alerta-ring ring-2"></div>
+                    <div class="alerta-particles" id="alertaParticles2"></div>
+                </div>
+
+                <div class="slide-content center" style="position:relative; z-index:3;">
+                    <span class="ppt-tag">08 / CONCLUSIÓN</span>
+                    <h2 class="ppt-heading">DEL CONTROL<br><span>AL DIÁLOGO.</span></h2>
+
+                    <p class="ppt-text center-text">
+                        La violencia directa se alimenta de la exclusión y la ausencia del Estado.
+                        Las respuestas deben ir más allá del control policial: requieren
+                        <strong>diálogo democrático y mesas de concertación</strong>.
+                    </p>
+
+                    <p class="ppt-final">DIÁLOGO · CONCERTACIÓN · ESTADO PRESENTE</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- BOTÓN LATERAL DE NAVEGACIÓN -->
+        <div class="ppt-nav">
+            <button class="ppt-nav-btn" id="navDown" aria-label="Bajar sección">↓</button>
+            <div class="ppt-progress"><div class="ppt-progress-fill" id="progressFill"></div></div>
+            <button class="ppt-nav-btn" id="navUp" aria-label="Subir sección">↑</button>
+            <span class="ppt-counter" id="slideCounter">01 / 08</span>
+        </div>
+
+        <footer class="footer">NEXUS · CONFLICTOS, VIOLENCIA E ILEGALIDAD © 2026 — VALERY</footer>
+
+    </main>
+
+</div>
+
+<script>
+/* ===== FECHA ===== */
+const currentDate = document.getElementById("currentDate");
+if (currentDate) {
+    currentDate.textContent = new Date().toLocaleDateString("es-PE", {
+        weekday: "long", day: "numeric", month: "long", year: "numeric"
+    });
+}
+
+/* ===== MODO OSCURO ===== */
+const themeBtn = document.getElementById("themeBtn");
+if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        themeBtn.textContent = document.body.classList.contains("dark") ? "☾" : "☼";
+    });
+}
+
+/* ===== NAVEGACIÓN PPT ===== */
+const slides = document.querySelectorAll("[data-slide]");
+const navDown = document.getElementById("navDown");
+const navUp = document.getElementById("navUp");
+const progressFill = document.getElementById("progressFill");
+const slideCounter = document.getElementById("slideCounter");
+let current = 0;
+
+function goToSlide(i) {
+    current = Math.max(0, Math.min(slides.length - 1, i));
+    slides[current].scrollIntoView({ behavior: "smooth", block: "start" });
+    updateNav();
+}
+
+function updateNav() {
+    let activeIndex = 0;
+    slides.forEach((s, i) => {
+        const rect = s.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            activeIndex = i;
+        }
+    });
+    current = activeIndex;
+
+    const pct = ((current + 1) / slides.length) * 100;
+    if (progressFill) progressFill.style.height = pct + "%";
+    if (slideCounter) slideCounter.textContent =
+        String(current + 1).padStart(2, "0") + " / " + String(slides.length).padStart(2, "0");
+
+    if (navUp) navUp.style.opacity = current === 0 ? "0.35" : "1";
+    if (navDown) navDown.style.opacity = current === slides.length - 1 ? "0.35" : "1";
+}
+
+if (navDown) navDown.addEventListener("click", () => goToSlide(current + 1));
+if (navUp)   navUp.addEventListener("click",   () => goToSlide(current - 1));
+
+window.addEventListener("scroll", updateNav, { passive: true });
+window.addEventListener("resize", updateNav);
+updateNav();
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown" || e.key === "PageDown") goToSlide(current + 1);
+    if (e.key === "ArrowUp"   || e.key === "PageUp")   goToSlide(current - 1);
+});
+
+/* ===== PARTÍCULAS DE ALERTA (sutiles) ===== */
+function createAlertaParticles(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    for (let i = 0; i < 25; i++) {
+        const p = document.createElement("div");
+        p.className = "alerta-particle";
+        p.style.left = Math.random() * 100 + "%";
+        p.style.top = Math.random() * 100 + "%";
+        p.style.animationDelay = (Math.random() * 6) + "s";
+        p.style.animationDuration = (4 + Math.random() * 4) + "s";
+        const size = 2 + Math.random() * 3;
+        p.style.width = size + "px";
+        p.style.height = size + "px";
+        container.appendChild(p);
+    }
+}
+createAlertaParticles("alertaParticles");
+createAlertaParticles("alertaParticles2");
+</script>
+
+</body>
+</html>

@@ -1,0 +1,709 @@
+/* =========================================
+   TEMA EDWIN — PÚRPURA + GOJO AURA
+========================================= */
+
+:root {
+    --purp-dark:    #16082a;
+    --purp-darker:  #0d0418;
+    --purp-primary: #7c3aed;      /* púrpura principal */
+    --purp-light:   #a78bfa;      /* púrpura claro */
+    --purp-soft:    #c4b5fd;      /* lavanda */
+    --purp-cream:   #f5f0ff;      /* fondo claro lavanda */
+    --purp-ink:     #1e0b3a;
+    --purp-muted:   #6b5b8f;
+    --purp-border:  #2d1e4d;
+    --purp-glow:    rgba(124, 58, 237, .5);
+}
+
+/* =========================================
+   APLICAR TEMA AL DASHBOARD
+========================================= */
+body.theme-purpura {
+    --accent: #7c3aed;
+    --accent-light: #a78bfa;
+    --accent-glow: rgba(124,58,237,.4);
+}
+
+body.theme-purpura .nav-item.active {
+    background: var(--purp-primary) !important;
+    color: #fff !important;
+    box-shadow: 0 0 18px var(--purp-glow);
+}
+body.theme-purpura .nav-item.active .nav-icon {
+    color: #fff !important;
+}
+body.theme-purpura .nav-item:hover:not(.active) {
+    background: rgba(124,58,237,.15);
+    color: var(--purp-soft);
+}
+body.theme-purpura .nav-item:hover:not(.active) .nav-icon {
+    color: var(--purp-soft);
+}
+body.theme-purpura .topbar {
+    border-bottom: 2px solid var(--purp-primary);
+}
+body.theme-purpura .breadcrumb strong {
+    color: var(--purp-primary);
+}
+body.theme-purpura .icon-btn:hover {
+    border-color: var(--purp-primary);
+    color: var(--purp-primary);
+}
+
+/* =========================================
+   BASE PPT
+========================================= */
+.ppt-wrapper { position: relative; width: 100%; }
+
+.ppt-slide {
+    position: relative;
+    min-height: calc(100vh - 75px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 8%;
+    overflow: hidden;
+    border-bottom: 1px solid var(--purp-border);
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2;
+    max-width: 980px;
+    width: 100%;
+}
+.slide-content.center { text-align: center; }
+.slide-content.wide { max-width: 1200px; }
+
+/* =========================================
+   SLIDE OSCURA PÚRPURA
+========================================= */
+.ppt-slide.slide-dark {
+    background: var(--purp-dark);
+    color: #f0ebff;
+}
+.slide-dark .slide-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at top left, rgba(124,58,237,.2), transparent 55%),
+        radial-gradient(ellipse at bottom right, rgba(168,85,247,.18), transparent 55%),
+        var(--purp-dark);
+    z-index: 0;
+}
+.slide-dark .grid-bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(124,58,237,.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124,58,237,.09) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+/* =========================================
+   SLIDE CLARA LAVANDA
+========================================= */
+.ppt-slide.slide-light {
+    background: var(--purp-cream);
+    color: var(--purp-ink);
+}
+.slide-light::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top right, rgba(124,58,237,.07), transparent 50%),
+        radial-gradient(circle at bottom left, rgba(124,58,237,.05), transparent 50%);
+    z-index: 0;
+}
+.slide-light .slide-content { z-index: 2; }
+
+/* =========================================
+   ELEMENTOS COMUNES
+========================================= */
+.ppt-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+    padding: 6px 14px;
+    border-radius: 30px;
+}
+.slide-dark .ppt-tag {
+    color: var(--purp-soft);
+    border: 1px solid rgba(124,58,237,.5);
+    background: rgba(124,58,237,.12);
+}
+.slide-light .ppt-tag {
+    color: var(--purp-primary);
+    border: 1px solid rgba(124,58,237,.35);
+    background: rgba(124,58,237,.06);
+}
+
+.ppt-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(48px, 7.5vw, 110px);
+    font-weight: 900;
+    line-height: .9;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    color: #fff;
+}
+.ppt-title span { color: var(--purp-soft); }
+
+.ppt-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(34px, 5vw, 68px);
+    font-weight: 900;
+    line-height: .95;
+    margin-bottom: 25px;
+}
+.slide-dark .ppt-heading { color: #fff; }
+.slide-dark .ppt-heading span { color: var(--purp-soft); }
+.slide-light .ppt-heading { color: var(--purp-ink); }
+.slide-light .ppt-heading span { color: var(--purp-primary); }
+
+.ppt-subtitle {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #cbbcff;
+    max-width: 680px;
+    margin: 0 auto 30px;
+}
+
+.ppt-text {
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 850px;
+    margin-bottom: 22px;
+}
+.slide-dark .ppt-text { color: #d9ccff; }
+.slide-light .ppt-text { color: var(--purp-muted); }
+.slide-light .ppt-text strong { color: var(--purp-primary); }
+.slide-dark .ppt-text strong { color: var(--purp-soft); }
+
+.ppt-text.center-text {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ppt-author {
+    margin-top: 35px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--purp-soft);
+    font-weight: 700;
+}
+
+.ppt-final {
+    margin-top: 35px;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--purp-soft);
+}
+
+.ppt-source {
+    margin-top: 20px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--purp-muted);
+    font-style: italic;
+    text-align: right;
+}
+
+/* =========================================
+   HIGHLIGHT STAT (slide 2)
+========================================= */
+.highlight-stat {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 28px 35px;
+    background: linear-gradient(120deg, rgba(124,58,237,.2), rgba(168,85,247,.1));
+    border: 1px solid rgba(124,58,237,.4);
+    border-radius: 16px;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+}
+.highlight-stat::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: var(--purp-primary);
+    box-shadow: 0 0 15px var(--purp-glow);
+}
+.stat-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 78px;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--purp-soft);
+    text-shadow: 0 0 30px var(--purp-glow);
+    flex-shrink: 0;
+}
+.stat-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #d9ccff;
+}
+.stat-desc strong { color: var(--purp-soft); }
+
+/* =========================================
+   ACTORS GRID (slide 3 clara)
+========================================= */
+.actors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+.actor-card {
+    background: #fff;
+    border: 1px solid rgba(124,58,237,.15);
+    border-radius: 14px;
+    padding: 26px 22px;
+    text-align: center;
+    transition: .35s;
+    box-shadow: 0 4px 15px rgba(124,58,237,.05);
+}
+.actor-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--purp-primary);
+    box-shadow: 0 15px 35px rgba(124,58,237,.18);
+}
+.a-icon {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+.actor-card h3 {
+    font-size: 15px;
+    color: var(--purp-primary);
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+.actor-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--purp-muted);
+}
+
+/* =========================================
+   CAUSES LIST (slide 4 oscura)
+========================================= */
+.causes-list {
+    display: grid;
+    gap: 14px;
+    margin-top: 25px;
+}
+.cause-item {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 20px;
+    align-items: center;
+    padding: 18px 24px;
+    background: linear-gradient(90deg, rgba(124,58,237,.15), rgba(124,58,237,.03));
+    border-left: 3px solid var(--purp-primary);
+    border-radius: 10px;
+    transition: .3s;
+}
+.cause-item:hover {
+    background: linear-gradient(90deg, rgba(124,58,237,.25), rgba(124,58,237,.08));
+    transform: translateX(6px);
+    box-shadow: 0 6px 20px rgba(124,58,237,.2);
+}
+.c-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--purp-primary);
+    line-height: 1;
+    text-shadow: 0 0 20px rgba(124,58,237,.3);
+}
+.c-content h3 {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+.c-content p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #cbbcff;
+}
+
+/* =========================================
+   STATS GRID (slide 5 clara)
+========================================= */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+    margin-top: 30px;
+}
+.stat-card {
+    background: linear-gradient(180deg, #fff, #faf6ff);
+    border: 1px solid rgba(124,58,237,.2);
+    border-radius: 14px;
+    padding: 24px 16px;
+    text-align: center;
+    transition: .3s;
+    position: relative;
+    overflow: hidden;
+}
+.stat-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--purp-primary), var(--purp-light));
+}
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--purp-primary);
+    box-shadow: 0 12px 30px rgba(124,58,237,.2);
+}
+.s-big {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--purp-primary);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.s-label {
+    font-size: 12px;
+    color: var(--purp-muted);
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+/* =========================================
+   CONSECUENCIAS (slide 6 oscura)
+========================================= */
+.consequences-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+}
+.cons-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 22px 24px;
+    background: linear-gradient(145deg, rgba(124,58,237,.15), rgba(13,4,24,.6));
+    border: 1px solid rgba(124,58,237,.3);
+    border-radius: 12px;
+    transition: .3s;
+}
+.cons-card:hover {
+    border-color: var(--purp-light);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(124,58,237,.2);
+}
+.cons-card.wide-card {
+    grid-column: 1 / -1;
+    background: linear-gradient(145deg, rgba(168,85,247,.25), rgba(124,58,237,.1));
+    border-color: var(--purp-soft);
+}
+.cons-icon {
+    font-size: 26px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+.cons-card p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #d9ccff;
+}
+
+/* =========================================
+   SOLUTIONS GRID (slide 7 clara)
+========================================= */
+.solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+}
+.sol-card {
+    background: #fff;
+    border: 1px solid rgba(124,58,237,.15);
+    border-radius: 12px;
+    padding: 24px 20px;
+    transition: .35s;
+    position: relative;
+    overflow: hidden;
+}
+.sol-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 0; height: 3px;
+    background: linear-gradient(90deg, var(--purp-primary), var(--purp-light));
+    transition: width .35s;
+}
+.sol-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--purp-primary);
+    box-shadow: 0 12px 30px rgba(124,58,237,.15);
+}
+.sol-card:hover::before { width: 100%; }
+.sol-num {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--purp-primary);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+.sol-card h3 {
+    font-size: 14px;
+    color: var(--purp-ink);
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: .3px;
+}
+.sol-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--purp-muted);
+}
+
+/* =========================================
+   ANIMACIÓN GOJO — HOLLOW PURPLE
+========================================= */
+.gojo-aura {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 700px;
+    z-index: 1;
+    pointer-events: none;
+    opacity: .7;
+}
+.gojo-aura.final-aura {
+    width: 500px;
+    height: 500px;
+    opacity: .6;
+}
+
+.gojo-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 2px solid var(--purp-primary);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ringExpand 4s ease-out infinite;
+    box-shadow: 0 0 40px var(--purp-glow), inset 0 0 30px rgba(124,58,237,.2);
+}
+.gojo-ring.ring-1 {
+    width: 200px; height: 200px;
+    border-color: var(--purp-soft);
+    animation-delay: 0s;
+}
+.gojo-ring.ring-2 {
+    width: 200px; height: 200px;
+    border-color: var(--purp-light);
+    animation-delay: 1.3s;
+}
+.gojo-ring.ring-3 {
+    width: 200px; height: 200px;
+    border-color: var(--purp-primary);
+    animation-delay: 2.6s;
+}
+
+@keyframes ringExpand {
+    0% {
+        width: 120px;
+        height: 120px;
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    100% {
+        width: 700px;
+        height: 700px;
+        opacity: 0;
+        border-width: 1px;
+    }
+}
+
+.gojo-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(
+        circle,
+        rgba(196,181,253,.9) 0%,
+        rgba(124,58,237,.7) 30%,
+        rgba(124,58,237,.3) 60%,
+        transparent 80%
+    );
+    border-radius: 50%;
+    animation: corePulse 3s ease-in-out infinite;
+    filter: blur(2px);
+}
+
+@keyframes corePulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: .8;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.4);
+        opacity: 1;
+        box-shadow: 0 0 80px var(--purp-glow);
+    }
+}
+
+/* Partículas flotantes */
+.gojo-particles {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+.gojo-particles .particle {
+    position: absolute;
+    background: var(--purp-soft);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--purp-glow);
+    animation: particleFloat linear infinite;
+    opacity: 0;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0) scale(.5);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-300px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* =========================================
+   BOTÓN LATERAL DE NAVEGACIÓN
+========================================= */
+.ppt-nav {
+    position: fixed;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 999;
+    background: rgba(13,4,24,.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(124,58,237,.4);
+    border-radius: 50px;
+    padding: 14px 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+.ppt-nav-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid rgba(124,58,237,.4);
+    background: rgba(124,58,237,.12);
+    color: var(--purp-soft);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.ppt-nav-btn:hover {
+    background: var(--purp-primary);
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--purp-glow);
+}
+.ppt-progress {
+    width: 6px;
+    height: 120px;
+    background: rgba(124,58,237,.2);
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+.ppt-progress-fill {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 12.5%;
+    background: linear-gradient(180deg, var(--purp-soft), var(--purp-primary));
+    transition: height .4s ease;
+    border-radius: 4px;
+    box-shadow: 0 0 15px var(--purp-glow);
+}
+.ppt-counter {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--purp-soft);
+    letter-spacing: 1px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    padding: 4px 0;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+@media (max-width: 1100px) {
+    .actors-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats-grid { grid-template-columns: repeat(3, 1fr); }
+    .solutions-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+    .consequences-list { grid-template-columns: 1fr; }
+    .cause-item { grid-template-columns: 50px 1fr; padding: 16px 18px; }
+    .c-num { font-size: 30px; }
+    .stat-number { font-size: 56px; }
+    .highlight-stat { flex-direction: column; text-align: center; gap: 15px; }
+}
+
+@media (max-width: 700px) {
+    .ppt-slide { padding: 45px 6%; min-height: calc(100vh - 60px); }
+    .actors-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .solutions-grid { grid-template-columns: 1fr; }
+    .ppt-nav { right: 10px; padding: 10px 6px; gap: 8px; }
+    .ppt-nav-btn { width: 36px; height: 36px; font-size: 15px; }
+    .ppt-progress { height: 80px; }
+    .ppt-counter { font-size: 10px; }
+    .ppt-title { font-size: clamp(38px, 11vw, 60px); }
+    .ppt-heading { font-size: clamp(28px, 8vw, 44px); }
+    .gojo-aura { width: 400px; height: 400px; }
+    .gojo-core { width: 80px; height: 80px; }
+}

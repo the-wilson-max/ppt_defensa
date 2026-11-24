@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXUS | Preguntas Interactivas</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/preguntas.css">
+</head>
+<body class="theme-quiz">
+
+<div class="app">
+
+    <!-- ==================== SIDEBAR ==================== -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo institucional">
+            <span class="logo-text">UNIVERSIDAD<br>SAN LUIS GONZAGA</span>
+        </div>
+
+        <div class="section-label">WORKSPACE</div>
+
+        <a class="nav-item" href="inicio.html">
+            <span class="nav-icon">◈</span><span class="nav-text">Inicio</span>
+        </a>
+        <a class="nav-item" href="1_wilson.html">
+            <span class="nav-icon">◈</span><span class="nav-text">WILSON</span>
+        </a>
+        <a class="nav-item" href="2_damaris.html">
+            <span class="nav-icon">◈</span><span class="nav-text">DAMARIS</span>
+        </a>
+        <a class="nav-item" href="3_alessandro.html">
+            <span class="nav-icon">◈</span><span class="nav-text">ALESSANDRO</span>
+        </a>
+        <a class="nav-item" href="4_edwin.html">
+            <span class="nav-icon">◈</span><span class="nav-text">EDWIN</span>
+        </a>
+        <a class="nav-item" href="5_valery.html">
+            <span class="nav-icon">◈</span><span class="nav-text">VALERY</span>
+        </a>
+        <a class="nav-item" href="6_conclusion.html">
+            <span class="nav-icon">◈</span><span class="nav-text">CONCLUSIÓN</span>
+        </a>
+        <a class="nav-item active" href="7_preguntas.html">
+            <span class="nav-icon">◈</span><span class="nav-text">PREGUNTAS</span>
+        </a>
+
+        <div class="sidebar-bottom">
+            <div class="profile">
+                <div class="avatar">W</div>
+                <div class="profile-info">
+                    <strong>Wilson</strong>
+                    <small>Administrador</small>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+
+    <!-- ==================== MAIN ==================== -->
+    <main class="main">
+
+        <header class="topbar">
+            <div class="breadcrumb">NEXUS / <strong>Preguntas Interactivas</strong></div>
+            <div class="top-actions">
+                <span class="date" id="currentDate"></span>
+                <button class="icon-btn" id="themeBtn">☼</button>
+            </div>
+        </header>
+
+
+        <!-- ==================== QUIZ WRAPPER ==================== -->
+        <div class="quiz-wrapper">
+
+            <!-- ===== PANTALLA DE INICIO ===== -->
+            <section class="quiz-screen active" id="startScreen">
+                <div class="quiz-start-card">
+                    <div class="start-badge">🎓 ACTIVIDAD INTERACTIVA</div>
+                    <h1 class="start-title">PON A PRUEBA<br><span>TU CONOCIMIENTO.</span></h1>
+                    <p class="start-desc">
+                        Responde 10 preguntas sobre los temas del grupo.
+                        Cada pregunta tiene 4 opciones y un tiempo de reflexión.
+                    </p>
+
+                    <div class="start-stats">
+                        <div class="stat-box">
+                            <div class="stat-num">10</div>
+                            <div class="stat-lbl">Preguntas</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num">5</div>
+                            <div class="stat-lbl">Temas</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-num">4</div>
+                            <div class="stat-lbl">Opciones</div>
+                        </div>
+                    </div>
+
+                    <button class="start-btn" id="startBtn">
+                        COMENZAR QUIZ →
+                    </button>
+                </div>
+            </section>
+
+
+            <!-- ===== PANTALLA DEL QUIZ ===== -->
+            <section class="quiz-screen" id="quizScreen">
+                <div class="quiz-header">
+                    <div class="quiz-topic" id="quizTopic">TEMA</div>
+                    <div class="quiz-progress">
+                        <div class="quiz-progress-bar">
+                            <div class="quiz-progress-fill" id="quizProgressFill"></div>
+                        </div>
+                        <div class="quiz-progress-text">
+                            <span id="currentQ">01</span> / <span id="totalQ">10</span>
+                        </div>
+                    </div>
+                    <div class="quiz-score">
+                        <span class="score-icon">⭐</span>
+                        <span id="scoreValue">0</span> pts
+                    </div>
+                </div>
+
+                <div class="quiz-card">
+                    <div class="quiz-question" id="questionText"></div>
+                    <div class="quiz-options" id="optionsContainer"></div>
+                    <div class="quiz-feedback" id="feedback"></div>
+                </div>
+            </section>
+
+
+            <!-- ===== PANTALLA FINAL ===== -->
+            <section class="quiz-screen" id="resultScreen">
+                <div class="result-card">
+                    <div class="result-emoji" id="resultEmoji">🎉</div>
+                    <h1 class="result-title" id="resultTitle">¡EXCELENTE!</h1>
+                    <div class="result-score">
+                        <span id="finalScore">0</span>
+                        <span class="result-score-total">/ 10</span>
+                    </div>
+                    <p class="result-msg" id="resultMsg">
+                        Has demostrado un gran conocimiento de los temas.
+                    </p>
+
+                    <div class="result-breakdown" id="resultBreakdown"></div>
+
+                    <div class="result-actions">
+                        <button class="result-btn retry" id="retryBtn">
+                            ↻ INTENTAR DE NUEVO
+                        </button>
+                        <a href="6_conclusion.html" class="result-btn back">
+                            ← VOLVER A LA CONCLUSIÓN
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="footer">NEXUS · PREGUNTAS INTERACTIVAS © 2026</footer>
+
+    </main>
+</div>
+
+<script>
+/* =========================================
+   FECHA
+========================================= */
+const currentDate = document.getElementById("currentDate");
+if (currentDate) {
+    currentDate.textContent = new Date().toLocaleDateString("es-PE", {
+        weekday: "long", day: "numeric", month: "long", year: "numeric"
+    });
+}
+
+/* =========================================
+   MODO OSCURO
+========================================= */
+const themeBtn = document.getElementById("themeBtn");
+if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        themeBtn.textContent = document.body.classList.contains("dark") ? "☾" : "☼";
+    });
+}
+
+/* =========================================
+   BASE DE PREGUNTAS
+========================================= */
+const questions = [
+    // ===== WILSON — CULTURA DE PAZ (VERDE) =====
+    {
+        topic: "CULTURA DE PAZ",
+        color: "verde",
+        name: "WILSON",
+        question: "¿Qué busca principalmente la cultura de paz?",
+        options: [
+            "Eliminar todos los conflictos de la sociedad",
+            "Que las personas convivan respetando sus diferencias y resolviendo conflictos con diálogo",
+            "Imponer el orden mediante la fuerza del Estado",
+            "Evitar que las personas expresen sus opiniones"
+        ],
+        correct: 1,
+        explanation: "La cultura de paz no busca eliminar los conflictos, sino enseñar a gestionarlos con respeto, diálogo y comprensión."
+    },
+    {
+        topic: "CULTURA DE PAZ",
+        color: "verde",
+        name: "WILSON",
+        question: "¿Cuál de los siguientes es un principio fundamental de la cultura de paz?",
+        options: [
+            "Discriminación",
+            "Intolerancia",
+            "Solidaridad",
+            "Violencia"
+        ],
+        correct: 2,
+        explanation: "La solidaridad es uno de los 6 principios fundamentales: respeto, tolerancia, igualdad, justicia, solidaridad y diálogo."
+    },
+
+    // ===== DAMARIS — DINÁMICAS SOCIOAMBIENTALES (VIOLETA) =====
+    {
+        topic: "DINÁMICAS SOCIOAMBIENTALES",
+        color: "violeta",
+        name: "DAMARIS",
+        question: "¿Qué son las dinámicas socioambientales?",
+        options: [
+            "Solo los fenómenos naturales como lluvias y sequías",
+            "Las relaciones e interacciones entre la sociedad y el medio ambiente",
+            "Las leyes que protegen a las empresas mineras",
+            "Los conflictos entre países por recursos"
+        ],
+        correct: 1,
+        explanation: "Son las relaciones e interacciones entre sociedad y medio ambiente, que se producen por actividades humanas y procesos naturales."
+    },
+    {
+        topic: "DINÁMICAS SOCIOAMBIENTALES",
+        color: "violeta",
+        name: "DAMARIS",
+        question: "¿Cuál es un ejemplo de dinámica socioambiental POSITIVA?",
+        options: [
+            "Deforestación",
+            "Minería ilegal",
+            "Reforestación",
+            "Contaminación de ríos"
+        ],
+        correct: 2,
+        explanation: "La reforestación es una dinámica positiva porque favorece la conservación del medio ambiente y el bienestar social."
+    },
+
+    // ===== ALESSANDRO — TEORÍAS DEL CONFLICTO (VINO) =====
+    {
+        topic: "TEORÍAS DEL CONFLICTO",
+        color: "vino",
+        name: "ALESSANDRO",
+        question: "Según las teorías del conflicto, ¿qué es la sociedad?",
+        options: [
+            "Un bloque homogéneo en paz permanente",
+            "Un espacio de tensiones estructurales e intereses contrapuestos",
+            "Un lugar donde no existen desigualdades",
+            "Un sistema perfecto sin conflictos"
+        ],
+        correct: 1,
+        explanation: "La sociedad no es un bloque homogéneo: coexisten tensiones estructurales, intereses contrapuestos y disputas por el poder."
+    },
+    {
+        topic: "TEORÍAS DEL CONFLICTO",
+        color: "vino",
+        name: "ALESSANDRO",
+        question: "¿Cuál es la fase del ciclo del conflicto donde se puede PREVENIR estratégicamente?",
+        options: [
+            "Movilización",
+            "Escalada",
+            "Latente",
+            "Resolución"
+        ],
+        correct: 2,
+        explanation: "La fase latente es el momento óptimo para la prevención estratégica, cuando las desigualdades aún no se han manifestado."
+    },
+
+    // ===== EDWIN — CONFLICTOS SOCIOAMBIENTALES (PÚRPURA) =====
+    {
+        topic: "CONFLICTOS SOCIOAMBIENTALES",
+        color: "purpura",
+        name: "EDWIN",
+        question: "Según la Defensoría del Pueblo (marzo 2026), ¿qué porcentaje de conflictos son socioambientales?",
+        options: [
+            "25%",
+            "40%",
+            "54%",
+            "75%"
+        ],
+        correct: 2,
+        explanation: "De 161 conflictos activos, 87 (54%) son socioambientales según el reporte de la Defensoría del Pueblo de marzo 2026."
+    },
+    {
+        topic: "CONFLICTOS SOCIOAMBIENTALES",
+        color: "purpura",
+        name: "EDWIN",
+        question: "¿Cuál es una solución efectiva para los conflictos socioambientales?",
+        options: [
+            "Reprimir las protestas con la policía",
+            "Ignorar las demandas de las comunidades",
+            "Diálogo temprano y consulta previa a las comunidades",
+            "Aprobar proyectos sin estudios de impacto"
+        ],
+        correct: 2,
+        explanation: "El diálogo temprano y la consulta previa, libre e informada son claves para prevenir y resolver conflictos socioambientales."
+    },
+
+    // ===== VALERY — VIOLENCIA E ILEGALIDAD (ROJO) =====
+    {
+        topic: "VIOLENCIA E ILEGALIDAD",
+        color: "rojo",
+        name: "VALERY",
+        question: "Según Johan Galtung, ¿qué tipo de violencia es la pobreza y la exclusión?",
+        options: [
+            "Violencia directa",
+            "Violencia estructural",
+            "Violencia cultural",
+            "Violencia física"
+        ],
+        correct: 1,
+        explanation: "Galtung distingue: directa (agresiones), estructural (pobreza, exclusión) y cultural (normaliza las otras dos)."
+    },
+    {
+        topic: "VIOLENCIA E ILEGALIDAD",
+        color: "rojo",
+        name: "VALERY",
+        question: "¿Qué relación existe entre los conflictos sociales y la ilegalidad en el Perú?",
+        options: [
+            "No tienen ninguna relación",
+            "La ilegalidad ocupa los vacíos de autoridad del Estado",
+            "Los conflictos solo afectan a las empresas formales",
+            "La ilegalidad solo ocurre en Lima"
+        ],
+        correct: 1,
+        explanation: "Donde el Estado no llega, la ilegalidad ocupa su lugar: economías ilegales controlan territorios y usan la violencia."
+    }
+];
+
+/* =========================================
+   ESTADO DEL QUIZ
+========================================= */
+let currentQuestion = 0;
+let score = 0;
+let answersLog = [];
+let isLocked = false;
+
+/* =========================================
+   ELEMENTOS DOM
+========================================= */
+const startScreen = document.getElementById("startScreen");
+const quizScreen = document.getElementById("quizScreen");
+const resultScreen = document.getElementById("resultScreen");
+const startBtn = document.getElementById("startBtn");
+const retryBtn = document.getElementById("retryBtn");
+
+const quizTopic = document.getElementById("quizTopic");
+const quizProgressFill = document.getElementById("quizProgressFill");
+const currentQEl = document.getElementById("currentQ");
+const totalQEl = document.getElementById("totalQ");
+const scoreValueEl = document.getElementById("scoreValue");
+const questionText = document.getElementById("questionText");
+const optionsContainer = document.getElementById("optionsContainer");
+const feedback = document.getElementById("feedback");
+
+const resultEmoji = document.getElementById("resultEmoji");
+const resultTitle = document.getElementById("resultTitle");
+const finalScore = document.getElementById("finalScore");
+const resultMsg = document.getElementById("resultMsg");
+const resultBreakdown = document.getElementById("resultBreakdown");
+
+/* =========================================
+   INICIALIZACIÓN
+========================================= */
+totalQEl.textContent = questions.length;
+
+function showScreen(screen) {
+    document.querySelectorAll(".quiz-screen").forEach(s => s.classList.remove("active"));
+    screen.classList.add("active");
+}
+
+/* =========================================
+   MOSTRAR PREGUNTA
+========================================= */
+function showQuestion() {
+    isLocked = false;
+    const q = questions[currentQuestion];
+
+    // Actualizar encabezado
+    quizTopic.textContent = `${q.name} · ${q.topic}`;
+    quizTopic.className = `quiz-topic color-${q.color}`;
+
+    // Progreso
+    const pct = ((currentQuestion) / questions.length) * 100;
+    quizProgressFill.style.width = pct + "%";
+    currentQEl.textContent = String(currentQuestion + 1).padStart(2, "0");
+
+    // Score
+    scoreValueEl.textContent = score;
+
+    // Reset feedback
+    feedback.className = "quiz-feedback";
+    feedback.innerHTML = "";
+
+    // Pregunta con animación
+    questionText.textContent = q.question;
+    questionText.style.opacity = "0";
+    questionText.style.transform = "translateY(10px)";
+    setTimeout(() => {
+        questionText.style.transition = "all .4s ease";
+        questionText.style.opacity = "1";
+        questionText.style.transform = "translateY(0)";
+    }, 50);
+
+    // Opciones
+    optionsContainer.innerHTML = "";
+    q.options.forEach((opt, i) => {
+        const btn = document.createElement("button");
+        btn.className = `quiz-option color-${q.color}`;
+        btn.innerHTML = `
+            <span class="opt-letter">${String.fromCharCode(65 + i)}</span>
+            <span class="opt-text">${opt}</span>
+        `;
+        btn.addEventListener("click", () => selectAnswer(i, btn));
+        optionsContainer.appendChild(btn);
+    });
+}
+
+/* =========================================
+   SELECCIONAR RESPUESTA
+========================================= */
+function selectAnswer(index, button) {
+    if (isLocked) return;
+    isLocked = true;
+
+    const q = questions[currentQuestion];
+    const allOptions = optionsContainer.querySelectorAll(".quiz-option");
+
+    // Bloquear todas las opciones
+    allOptions.forEach(opt => opt.classList.add("locked"));
+
+    // Marcar la seleccionada como "tension"
+    button.classList.add("selected");
+
+    // ⏳ TIEMPO DE TENSIÓN: 2.5 segundos
+    feedback.className = `quiz-feedback tension color-${q.color}`;
+    feedback.innerHTML = `
+        <div class="tension-spinner"></div>
+        <div class="tension-text">Analizando respuesta...</div>
+    `;
+
+    setTimeout(() => {
+        const isCorrect = index === q.correct;
+
+        // Marcar la opción correcta
+        allOptions[q.correct].classList.add("correct");
+
+        // Si falló, marcar la incorrecta
+        if (!isCorrect) {
+            button.classList.add("incorrect");
+        } else {
+            score++;
+            scoreValueEl.textContent = score;
+        }
+
+        // Guardar en log
+        answersLog.push({
+            topic: q.topic,
+            color: q.color,
+            name: q.name,
+            isCorrect: isCorrect,
+            userAnswer: index,
+            correctAnswer: q.correct
+        });
+
+        // Mostrar feedback con explicación
+        feedback.className = `quiz-feedback ${isCorrect ? "success" : "error"} color-${q.color}`;
+        feedback.innerHTML = `
+            <div class="feedback-icon">${isCorrect ? "✓" : "✗"}</div>
+            <div class="feedback-content">
+                <div class="feedback-title">${isCorrect ? "¡Correcto!" : "Incorrecto"}</div>
+                <div class="feedback-exp">${q.explanation}</div>
+            </div>
+        `;
+
+        // Siguiente después de 3.5 segundos
+        setTimeout(() => {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                showQuestion();
+            } else {
+                showResults();
+            }
+        }, 3500);
+
+    }, 2500);
+}
+
+/* =========================================
+   MOSTRAR RESULTADOS
+========================================= */
+function showResults() {
+    quizProgressFill.style.width = "100%";
+
+    const total = questions.length;
+    const pct = (score / total) * 100;
+
+    // Emoji y mensaje según puntuación
+    let emoji, title, msg;
+    if (pct === 100) {
+        emoji = "🏆"; title = "¡PERFECTO!"; msg = "Has respondido todo correctamente. ¡Eres un experto en estos temas!";
+    } else if (pct >= 80) {
+        emoji = "🎉"; title = "¡EXCELENTE!"; msg = "Tienes un gran dominio de los temas. ¡Bien hecho!";
+    } else if (pct >= 60) {
+        emoji = "👍"; title = "¡BUEN TRABAJO!"; msg = "Vas por buen camino. Repasa algunos temas para dominarlos completamente.";
+    } else if (pct >= 40) {
+        emoji = "💪"; title = "¡SIGUE ASÍ!"; msg = "Has aprendido bastante. Repasa las presentaciones para reforzar.";
+    } else {
+        emoji = "📚"; title = "¡A REPASAR!"; msg = "No te preocupes. Repasa las secciones y vuelve a intentarlo.";
+    }
+
+    resultEmoji.textContent = emoji;
+    resultTitle.textContent = title;
+    finalScore.textContent = score;
+    resultMsg.textContent = msg;
+
+    // Breakdown por tema
+    const byTopic = {};
+    answersLog.forEach(a => {
+        if (!byTopic[a.topic]) {
+            byTopic[a.topic] = { correct: 0, total: 0, color: a.color, name: a.name };
+        }
+        byTopic[a.topic].total++;
+        if (a.isCorrect) byTopic[a.topic].correct++;
+    });
+
+    resultBreakdown.innerHTML = "";
+    Object.keys(byTopic).forEach(topic => {
+        const data = byTopic[topic];
+        const row = document.createElement("div");
+        row.className = `breakdown-row color-${data.color}`;
+        row.innerHTML = `
+            <div class="bd-topic">
+                <span class="bd-name">${data.name}</span>
+                <span class="bd-topic-name">${topic}</span>
+            </div>
+            <div class="bd-score">${data.correct} / ${data.total}</div>
+        `;
+        resultBreakdown.appendChild(row);
+    });
+
+    showScreen(resultScreen);
+}
+
+/* =========================================
+   REINICIAR
+========================================= */
+function resetQuiz() {
+    currentQuestion = 0;
+    score = 0;
+    answersLog = [];
+    isLocked = false;
+    scoreValueEl.textContent = "0";
+    quizProgressFill.style.width = "0%";
+}
+
+/* =========================================
+   EVENTOS
+========================================= */
+startBtn.addEventListener("click", () => {
+    resetQuiz();
+    showScreen(quizScreen);
+    showQuestion();
+});
+
+retryBtn.addEventListener("click", () => {
+    resetQuiz();
+    showScreen(quizScreen);
+    showQuestion();
+});
+</script>
+
+</body>
+</html>

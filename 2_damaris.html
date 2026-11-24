@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXUS | Dinámicas Socioambientales — Damaris</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/damaris.css">
+<link rel="stylesheet" href="css/geometry-dash.css">
+</head>
+<body class="theme-damaris">
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="LOGO.png" alt="Logo institucional">
+            <span class="logo-text">UNIVERSIDAD<br>SAN LUIS GONZAGA</span>
+        </div>
+        <div class="section-label">WORKSPACE</div>
+        <a class="nav-item" href="inicio.html"><span class="nav-icon">◈</span><span class="nav-text">Inicio</span></a>
+        <a class="nav-item" href="1_wilson.html"><span class="nav-icon">◈</span><span class="nav-text">WILSON</span></a>
+        <a class="nav-item active" href="2_damaris.html"><span class="nav-icon">◈</span><span class="nav-text">DAMARIS</span></a>
+        <a class="nav-item" href="3_alessandro.html"><span class="nav-icon">◈</span><span class="nav-text">ALESSANDRO</span></a>
+        <a class="nav-item" href="4_edwin.html"><span class="nav-icon">◈</span><span class="nav-text">EDWIN</span></a>
+        <a class="nav-item" href="5_valery.html"><span class="nav-icon">◈</span><span class="nav-text">VALERY</span></a>
+        <a class="nav-item" href="6_conclusion.html">
+            <span class="nav-icon">◈</span><span class="nav-text">FABRICIO</span>
+        </a>
+        <a class="nav-item active" href="7_preguntas.html">
+            <span class="nav-icon">◈</span><span class="nav-text">PREGUNTAS</span>
+        </a>
+        <div class="sidebar-bottom">
+            <div class="profile">
+                <div class="avatar">W</div>
+                <div class="profile-info">
+                    <strong>Wilson</strong>
+                    <small>Administrador</small>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main">
+
+        <header class="topbar">
+            <div class="breadcrumb">NEXUS / <strong>Damaris</strong></div>
+            <div class="top-actions">
+                <span class="date" id="currentDate"></span>
+                <button class="icon-btn" id="themeBtn">☼</button>
+            </div>
+        </header>
+
+        <!-- ============================
+             DIAPOSITIVAS (estilo PPT)
+        ============================= -->
+        <div class="ppt-wrapper">
+
+            <!-- SLIDE 1: PORTADA con animación GD -->
+            <section class="ppt-slide slide-dark gd-slide" data-slide>
+                <div class="slide-bg grid-bg"></div>
+
+                <!-- ANIMACIÓN GEOMETRY DASH (sutil) -->
+                <div class="gd-aura">
+                    <div class="gd-cube cube-1"></div>
+                    <div class="gd-cube cube-2"></div>
+                    <div class="gd-cube cube-3"></div>
+                    <div class="gd-cube cube-4"></div>
+                    <div class="gd-cube cube-5"></div>
+                    <div class="gd-trail" id="gdTrail"></div>
+                    <div class="gd-pulse pulse-1"></div>
+                    <div class="gd-pulse pulse-2"></div>
+                </div>
+
+                <div class="slide-content center" style="position:relative; z-index:3;">
+                    <span class="ppt-tag">01 / PRESENTACIÓN</span>
+                    <h1 class="ppt-title">DINÁMICAS<br><span>SOCIOAMBIENTALES.</span></h1>
+                    <p class="ppt-subtitle">
+                        Relaciones e interacciones entre la sociedad y el medio ambiente,
+                        y cómo las actividades humanas transforman nuestro entorno.
+                    </p>
+                    <div class="ppt-author">DAMARIS · Universidad San Luis Gonzaga</div>
+                </div>
+            </section>
+
+            <!-- SLIDE 2: ¿QUÉ SON? -->
+            <section class="ppt-slide slide-dark" data-slide>
+                <div class="slide-bg"></div>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">02 / CONCEPTO</span>
+                    <h2 class="ppt-heading">¿QUÉ SON LAS DINÁMICAS<br><span>SOCIOAMBIENTALES?</span></h2>
+
+                    <p class="ppt-text">
+                        Son las relaciones e interacciones que existen entre la sociedad y el
+                        medio ambiente. Se producen mediante las actividades humanas y los
+                        procesos naturales que transforman el entorno.
+                    </p>
+
+                    <p class="ppt-text">
+                        Permiten comprender cómo las personas utilizan los recursos naturales
+                        y cómo los cambios ambientales influyen en su calidad de vida.
+                    </p>
+
+                    <div class="elements-grid">
+                        <div class="element-card">
+                            <div class="e-icon">👥</div>
+                            <h3>Elementos sociales</h3>
+                            <p>Población, cultura, educación, costumbres y organización de las comunidades.</p>
+                        </div>
+                        <div class="element-card">
+                            <div class="e-icon">🌱</div>
+                            <h3>Elementos ambientales</h3>
+                            <p>Agua, aire, suelo, flora, fauna y clima.</p>
+                        </div>
+                        <div class="element-card">
+                            <div class="e-icon">💰</div>
+                            <h3>Elementos económicos</h3>
+                            <p>Agricultura, minería, pesca, industria, comercio y turismo.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 3: CARACTERÍSTICAS (CLARA) -->
+            <section class="ppt-slide slide-light" data-slide>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">03 / CARACTERÍSTICAS</span>
+                    <h2 class="ppt-heading">CARACTERÍSTICAS<br><span>PRINCIPALES</span></h2>
+
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="f-num">01</div>
+                            <h3>Interdependencia</h3>
+                            <p>La sociedad y la naturaleza dependen mutuamente.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="f-num">02</div>
+                            <h3>Transformación</h3>
+                            <p>Las actividades humanas modifican el ambiente.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="f-num">03</div>
+                            <h3>Complejidad</h3>
+                            <p>Intervienen factores sociales, económicos y naturales.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="f-num">04</div>
+                            <h3>Diversidad</h3>
+                            <p>Varían según las características de cada territorio.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="f-num">05</div>
+                            <h3>Desigualdad</h3>
+                            <p>Sus efectos no afectan a todas las comunidades por igual.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: FACTORES -->
+            <section class="ppt-slide slide-dark" data-slide>
+                <div class="slide-bg"></div>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">04 / FACTORES</span>
+                    <h2 class="ppt-heading">FACTORES QUE INFLUYEN<br><span>EN LAS DINÁMICAS</span></h2>
+
+                    <ul class="factors-list">
+                        <li><strong>Crecimiento poblacional</strong><span>Aumenta la demanda de agua, alimentos, viviendas y energía.</span></li>
+                        <li><strong>Urbanización</strong><span>Expansión de las ciudades y transformación de los espacios naturales.</span></li>
+                        <li><strong>Actividades económicas</strong><span>Agricultura, minería e industria que utilizan recursos naturales.</span></li>
+                        <li><strong>Cambio climático</strong><span>Provoca alteraciones ambientales, sequías e inundaciones.</span></li>
+                        <li><strong>Consumo de recursos</strong><span>Utilización excesiva del agua, suelo, bosques y minerales.</span></li>
+                        <li><strong>Educación ambiental</strong><span>Influye en la conciencia y responsabilidad de las personas.</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- SLIDE 5: TIPOS (CLARA) -->
+            <section class="ppt-slide slide-light" data-slide>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">05 / TIPOS</span>
+                    <h2 class="ppt-heading">TIPOS DE DINÁMICAS<br><span>SOCIOAMBIENTALES</span></h2>
+
+                    <div class="types-grid">
+                        <div class="type-card positive">
+                            <div class="type-badge">POSITIVAS</div>
+                            <h3>Favorecen la conservación</h3>
+                            <p>Acciones que benefician al medio ambiente y al bienestar social.</p>
+                            <ul>
+                                <li>Reforestación</li>
+                                <li>Reciclaje</li>
+                                <li>Energías renovables</li>
+                                <li>Agricultura sostenible</li>
+                                <li>Protección de ecosistemas</li>
+                            </ul>
+                        </div>
+                        <div class="type-card negative">
+                            <div class="type-badge">NEGATIVAS</div>
+                            <h3>Generan deterioro ambiental</h3>
+                            <p>Actividades que afectan negativamente al entorno.</p>
+                            <ul>
+                                <li>Deforestación</li>
+                                <li>Contaminación del agua y aire</li>
+                                <li>Minería ilegal</li>
+                                <li>Sobreexplotación de recursos</li>
+                                <li>Destrucción de hábitats</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 6: PROBLEMAS -->
+            <section class="ppt-slide slide-dark" data-slide>
+                <div class="slide-bg"></div>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">06 / PROBLEMÁTICA</span>
+                    <h2 class="ppt-heading">PRINCIPALES PROBLEMAS<br><span>SOCIOAMBIENTALES</span></h2>
+
+                    <div class="problems-grid">
+                        <div class="problem-card"><span>01</span><h3>Deforestación</h3><p>Pérdida de bosques y vegetación por actividades humanas.</p></div>
+                        <div class="problem-card"><span>02</span><h3>Contaminación ambiental</h3><p>Presencia de sustancias perjudiciales en agua, aire y suelo.</p></div>
+                        <div class="problem-card"><span>03</span><h3>Cambio climático</h3><p>Alteración de los patrones climáticos a largo plazo.</p></div>
+                        <div class="problem-card"><span>04</span><h3>Sobreexplotación</h3><p>Uso excesivo de los recursos naturales.</p></div>
+                        <div class="problem-card"><span>05</span><h3>Pérdida de biodiversidad</h3><p>Desaparición de especies y deterioro de los ecosistemas.</p></div>
+                        <div class="problem-card"><span>06</span><h3>Acumulación de residuos</h3><p>Manejo inadecuado de la basura que afecta al ambiente y la salud.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 7: PERÚ (CLARA) -->
+            <section class="ppt-slide slide-light" data-slide>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">07 / REALIDAD PERUANA</span>
+                    <h2 class="ppt-heading">DINÁMICAS EN<br><span>EL PERÚ</span></h2>
+
+                    <p class="ppt-text">
+                        El Perú presenta diferentes problemáticas socioambientales debido a su
+                        diversidad geográfica y sus actividades económicas.
+                    </p>
+
+                    <div class="regions-grid">
+                        <div class="region-card">
+                            <div class="r-label">COSTA</div>
+                            <ul>
+                                <li>Escasez de agua</li>
+                                <li>Contaminación de playas y ríos</li>
+                                <li>Crecimiento urbano</li>
+                                <li>Problemas de distribución hídrica</li>
+                            </ul>
+                        </div>
+                        <div class="region-card">
+                            <div class="r-label">SIERRA</div>
+                            <ul>
+                                <li>Retroceso de glaciares</li>
+                                <li>Erosión de suelos</li>
+                                <li>Contaminación minera</li>
+                            </ul>
+                        </div>
+                        <div class="region-card">
+                            <div class="r-label">SELVA</div>
+                            <ul>
+                                <li>Deforestación</li>
+                                <li>Minería ilegal</li>
+                                <li>Contaminación por mercurio</li>
+                                <li>Pérdida de biodiversidad</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ica-card">
+                        <div class="ica-tag">EJEMPLO · ICA</div>
+                        <p>
+                            Ica destaca por su producción agrícola y agroexportadora (uvas, espárragos
+                            y arándanos). Genera empleo y crecimiento económico, pero también una
+                            elevada demanda de agua. Problemas principales: <strong>sobreexplotación de
+                            aguas subterráneas, presión sobre recursos hídricos, crecimiento urbano y
+                            conflictos por el acceso al agua.</strong>
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 8: CONSECUENCIAS -->
+            <section class="ppt-slide slide-dark" data-slide>
+                <div class="slide-bg"></div>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">08 / CONSECUENCIAS</span>
+                    <h2 class="ppt-heading">CONSECUENCIAS DE LAS<br><span>DINÁMICAS SOCIOAMBIENTALES</span></h2>
+
+                    <div class="consequences-grid">
+                        <div class="consequence-card">
+                            <div class="c-icon">🌍</div>
+                            <h3>Ambientales</h3>
+                            <p>Contaminación, pérdida de biodiversidad, degradación de suelos y deterioro de ecosistemas.</p>
+                        </div>
+                        <div class="consequence-card">
+                            <div class="c-icon">👥</div>
+                            <h3>Sociales</h3>
+                            <p>Enfermedades, desigualdad, conflictos sociales y disminución de la calidad de vida.</p>
+                        </div>
+                        <div class="consequence-card">
+                            <div class="c-icon">📉</div>
+                            <h3>Económicas</h3>
+                            <p>Pérdidas agrícolas, reducción de recursos productivos y daños en infraestructura.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 9: SOLUCIONES (CLARA) -->
+            <section class="ppt-slide slide-light" data-slide>
+                <div class="slide-content wide">
+                    <span class="ppt-tag">09 / SOLUCIONES</span>
+                    <h2 class="ppt-heading">ALTERNATIVAS<br><span>DE SOLUCIÓN</span></h2>
+
+                    <div class="solutions-grid">
+                        <div class="solution-card"><div class="s-icon">📚</div><h3>Educación ambiental</h3><p>Desarrollar conciencia sobre el cuidado de la naturaleza.</p></div>
+                        <div class="solution-card"><div class="s-icon">💧</div><h3>Uso responsable del agua</h3><p>Evitar el desperdicio y mejorar los sistemas de riego.</p></div>
+                        <div class="solution-card"><div class="s-icon">♻️</div><h3>Reciclaje</h3><p>Reducir los residuos mediante la reutilización y separación.</p></div>
+                        <div class="solution-card"><div class="s-icon">🌳</div><h3>Reforestación</h3><p>Recuperar las áreas naturales afectadas.</p></div>
+                        <div class="solution-card"><div class="s-icon">⚡</div><h3>Energías renovables</h3><p>Promover fuentes de energía menos contaminantes.</p></div>
+                        <div class="solution-card"><div class="s-icon">🤝</div><h3>Participación ciudadana</h3><p>Involucrar a la población en la protección ambiental.</p></div>
+                        <div class="solution-card wide-card"><div class="s-icon">🌱</div><h3>Desarrollo sostenible</h3><p>Satisface las necesidades actuales sin comprometer los recursos de las futuras generaciones.</p></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SLIDE 10: CIERRE con animación GD -->
+            <section class="ppt-slide slide-dark final gd-slide" data-slide>
+                <div class="slide-bg grid-bg"></div>
+
+                <div class="gd-aura final-aura">
+                    <div class="gd-cube cube-1"></div>
+                    <div class="gd-cube cube-2"></div>
+                    <div class="gd-cube cube-3"></div>
+                    <div class="gd-pulse pulse-1"></div>
+                </div>
+
+                <div class="slide-content center" style="position:relative; z-index:3;">
+                    <span class="ppt-tag">10 / CONCLUSIÓN</span>
+                    <h2 class="ppt-heading">SOCIEDAD Y NATURALEZA<br><span>ESTÁN CONECTADAS.</span></h2>
+
+                    <p class="ppt-text center-text">
+                        Las acciones humanas pueden generar beneficios, pero también consecuencias
+                        negativas para el ambiente. Es fundamental promover prácticas responsables
+                        y un desarrollo sostenible que garantice una mejor calidad de vida para
+                        las generaciones presentes y futuras.
+                    </p>
+
+                    <p class="ppt-final">SOSTENIBILIDAD · RESPONSABILIDAD · FUTURO</p>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- BOTÓN LATERAL DE NAVEGACIÓN -->
+        <div class="ppt-nav">
+            <button class="ppt-nav-btn" id="navDown" aria-label="Bajar sección" title="Siguiente sección">↓</button>
+            <div class="ppt-progress"><div class="ppt-progress-fill" id="progressFill"></div></div>
+            <button class="ppt-nav-btn" id="navUp" aria-label="Subir sección" title="Sección anterior">↑</button>
+            <span class="ppt-counter" id="slideCounter">01 / 10</span>
+        </div>
+
+        <footer class="footer">NEXUS · DINÁMICAS SOCIOAMBIENTALES © 2026 — DAMARIS</footer>
+
+    </main>
+</div>
+
+<script>
+/* ===== FECHA ===== */
+const currentDate = document.getElementById("currentDate");
+if (currentDate) {
+    currentDate.textContent = new Date().toLocaleDateString("es-PE", {
+        weekday: "long", day: "numeric", month: "long", year: "numeric"
+    });
+}
+
+/* ===== MODO OSCURO ===== */
+const themeBtn = document.getElementById("themeBtn");
+if (themeBtn) {
+    themeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        themeBtn.textContent = document.body.classList.contains("dark") ? "☾" : "☼";
+    });
+}
+
+/* ===== NAVEGACIÓN POR DIAPOSITIVAS ===== */
+const slides = document.querySelectorAll("[data-slide]");
+const navDown = document.getElementById("navDown");
+const navUp = document.getElementById("navUp");
+const progressFill = document.getElementById("progressFill");
+const slideCounter = document.getElementById("slideCounter");
+let current = 0;
+
+function goToSlide(i) {
+    current = Math.max(0, Math.min(slides.length - 1, i));
+    slides[current].scrollIntoView({ behavior: "smooth", block: "start" });
+    updateNav();
+}
+
+function updateNav() {
+    let activeIndex = 0;
+    slides.forEach((s, i) => {
+        const rect = s.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+            activeIndex = i;
+        }
+    });
+    current = activeIndex;
+
+    const pct = ((current + 1) / slides.length) * 100;
+    if (progressFill) progressFill.style.height = pct + "%";
+    if (slideCounter) slideCounter.textContent =
+        String(current + 1).padStart(2, "0") + " / " + String(slides.length).padStart(2, "0");
+
+    if (navUp) navUp.style.opacity = current === 0 ? "0.35" : "1";
+    if (navDown) navDown.style.opacity = current === slides.length - 1 ? "0.35" : "1";
+}
+
+if (navDown) navDown.addEventListener("click", () => goToSlide(current + 1));
+if (navUp)   navUp.addEventListener("click",   () => goToSlide(current - 1));
+
+window.addEventListener("scroll", updateNav, { passive: true });
+window.addEventListener("resize", updateNav);
+updateNav();
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowDown" || e.key === "PageDown") goToSlide(current + 1);
+    if (e.key === "ArrowUp"   || e.key === "PageUp")   goToSlide(current - 1);
+});
+
+/* ===== TRAIL GEOMETRY DASH (líneas de trayectoria) ===== */
+const gdTrail = document.getElementById("gdTrail");
+if (gdTrail) {
+    for (let i = 0; i < 12; i++) {
+        const seg = document.createElement("div");
+        seg.className = "trail-seg";
+        seg.style.top = (15 + i * 5) + "%";
+        seg.style.animationDelay = (i * 0.15) + "s";
+        gdTrail.appendChild(seg);
+    }
+}
+</script>
+
+</body>
+</html>
